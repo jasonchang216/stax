@@ -14,9 +14,6 @@
 		9E1E1E30243C23AC0051C2E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1E1E2E243C23AC0051C2E0 /* LaunchScreen.storyboard */; };
 		9E1E1E3B243C23AD0051C2E0 /* staxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1E1E3A243C23AD0051C2E0 /* staxTests.swift */; };
 		9E1E1E46243C23AD0051C2E0 /* staxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1E1E45243C23AD0051C2E0 /* staxUITests.swift */; };
-		9E1E1E56243EBFE10051C2E0 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1E1E55243EBFE10051C2E0 /* SettingsTableViewController.swift */; };
-		9E1E1E58243EC5B40051C2E0 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1E1E57243EC5B40051C2E0 /* SettingCell.swift */; };
-		9E1E1E5A243EC7960051C2E0 /* SettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1E1E59243EC7960051C2E0 /* SettingsSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,9 +47,6 @@
 		9E1E1E41243C23AD0051C2E0 /* staxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = staxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E1E1E45243C23AD0051C2E0 /* staxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = staxUITests.swift; sourceTree = "<group>"; };
 		9E1E1E47243C23AD0051C2E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9E1E1E55243EBFE10051C2E0 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
-		9E1E1E57243EC5B40051C2E0 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
-		9E1E1E59243EC7960051C2E0 /* SettingsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,10 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				9E1E1E25243C23A40051C2E0 /* AppDelegate.swift */,
-				9E1E1E59243EC7960051C2E0 /* SettingsSection.swift */,
 				9E1E1E27243C23A40051C2E0 /* ViewController.swift */,
-				9E1E1E55243EBFE10051C2E0 /* SettingsTableViewController.swift */,
-				9E1E1E57243EC5B40051C2E0 /* SettingCell.swift */,
 				9E1E1E29243C23A40051C2E0 /* Main.storyboard */,
 				9E1E1E2C243C23AC0051C2E0 /* Assets.xcassets */,
 				9E1E1E2E243C23AC0051C2E0 /* LaunchScreen.storyboard */,
@@ -267,9 +258,6 @@
 			files = (
 				9E1E1E28243C23A40051C2E0 /* ViewController.swift in Sources */,
 				9E1E1E26243C23A40051C2E0 /* AppDelegate.swift in Sources */,
-				9E1E1E58243EC5B40051C2E0 /* SettingCell.swift in Sources */,
-				9E1E1E5A243EC7960051C2E0 /* SettingsSection.swift in Sources */,
-				9E1E1E56243EBFE10051C2E0 /* SettingsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
