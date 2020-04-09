@@ -10,7 +10,7 @@ import UIKit
 
 class SettingCell: UITableViewCell {
     
-/*
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,8 +21,12 @@ class SettingCell: UITableViewCell {
         
         // Configure the view for the selected state
     }
+    
+    @IBAction func `switch`(_ sender: Any) {
+    }
+    
 
-   */
+   /*
     
     var sectionType: SectionType? {
         didSet {
@@ -62,6 +66,8 @@ class SettingCell: UITableViewCell {
             print("Turned off")
         }
     }
+ 
+ */
     
  
 

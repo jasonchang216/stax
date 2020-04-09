@@ -10,11 +10,9 @@ import UIKit
 
 class SettingsTableViewController: UITableViewController {
 
-    var tablesView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureUI()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -25,39 +23,12 @@ class SettingsTableViewController: UITableViewController {
 
     // MARK: - Table view data source
     
-    func configureTableView() {
-        tablesView = UITableView()
-        tablesView.delegate = self
-        tablesView.dataSource = self
-        tablesView.rowHeight = 60
-        
-        tablesView.register(SettingCell.self, forCellReuseIdentifier: "SettingCell")
-        view.addSubview(tablesView)
-        tablesView.frame = view.frame
-        
-        tablesView.tableFooterView = UIView()
-    }
-        
-    func configureUI() {
-        configureTableView()
-        
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.barStyle = .black
-        navigationController?.navigationBar.barTintColor = UIColor(red: 55/255, green: 120/255, blue: 250/255, alpha: 1)
-        navigationItem.title = "Settings"
-    }
-}
-
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return SettingsSection.allCases.count
     }
-        
-        
+    
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         guard let section = SettingsSection(rawValue: section) else { return 0}
         
@@ -67,7 +38,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView()
         view.backgroundColor = UIColor(red: 55/255, green: 120/255, blue: 250/255, alpha:1)
         
@@ -83,12 +54,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return view
     }
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
     }
 
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SettingCell", for: indexPath) as! SettingCell
         
         guard let section = SettingsSection(rawValue: indexPath.section) else { return UITableViewCell()}
