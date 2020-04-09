@@ -9,6 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+//Settings
+    @IBOutlet weak var timerSettingLabel: UILabel!
+    
+    var timerSetting:String = ""
+    
+    func onUserAction(data: String) {
+        timerSetting = data
+        timerSettingLabel.text = timerSetting
+    }
+    
+    
  
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +47,8 @@ class ViewController: UIViewController {
         if isTimerRunning == false {
             runTimer()
         }
+        
+        
     }
     
 //Time keeper
@@ -79,6 +93,8 @@ class ViewController: UIViewController {
         timerLabel.text = timeString(time: TimeInterval(seconds))
         isTimerRunning = false
     }
+    
+
     
 }
 
