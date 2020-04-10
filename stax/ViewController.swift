@@ -16,25 +16,102 @@ class ViewController: UIViewController {
         mainTitle.text = "TIME TO WORKOUT"
         countLabel.text = " "
         exerciseLabel.text = " "
+        timerLabel.text = timeString(time: TimeInterval(sliderValue.value))
     }
+
+//Settings controls
+    
+    var upperBodySwitch: Bool = true
+    var lowerBodySwitch: Bool = true
+    var cardioSwitch: Bool = true
+    var coreSwitch: Bool = true
+    
+    @IBOutlet weak var sliderValue: UISlider!
+    @IBAction func timerSlider(_ sender: Any) {
+        timerLabel.text = timeString(time: TimeInterval(sliderValue.value))
+    }
+    
+    @IBAction func upperBodySwitcher(_ sender: Any) {
+        upperBodySwitch = !upperBodySwitch
+    }
+    
+    @IBAction func lowerBodySwitcher(_ sender: Any) {
+        lowerBodySwitch = !lowerBodySwitch
+    }
+    
+    @IBAction func cardioSwitcher(_ sender: Any) {
+        cardioSwitch = !cardioSwitch
+    }
+    
+    @IBAction func coreSwitcher(_ sender: Any) {
+        coreSwitch = !coreSwitch
+    }
+    
+
+    //Exercise List
+    let upperBodyExercises: [String] = ["PUSHUPS",   "UP-DOWN PLANKS"]
+    let upperBodyExercisesCount: [String] = ["10", "10"]
+    
+    
+    let lowerBodyExercises: [String] = ["SQUATS", "LUNGES (EACH LEG)", "LATERAL LUNGES (EACH SIDE)"]
+    let lowerBodyExercisesCount: [String] = ["20","10", "10"]
+    
+    
+    let cardioExercises: [String] = ["JUMPING JACKS", "BURPEES", "SECONDS OF HIGH KNEES"]
+    let cardioExercisesCount: [String] = ["30", "10", "30"]
+    
+    let coreExercises: [String] = ["SECONDS OF PLANK", "V-UPS"]
+    let coreExercisesCount: [String] = ["15", "10"]
     
 //Exercise randomizer
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var exerciseLabel: UILabel!
     @IBOutlet weak var mainTitle: UILabel!
     
-    let countList: [String] = ["20", "10", "15", "30", "10", "5", "10", "20", "10", "30"]
-    let exerciseList: [String] = ["SQUATS", "PUSHUPS", "SECONDS OF PLANK", "JUMPJACKS", "LUNGES (EACH LEG)", "BURPEES", "UP-DOWN PLANKS", "LATERAL LUNGES (EACH SIDE)", "V-UPS", "SECONDS OF HIGH KNEES"]
+    var countList: [String] = []
+    var exerciseList: [String] = []
     
     @IBAction func nextExercise(_ sender: Any) {
+        
+        if upperBodySwitch == true {
+            exerciseList += upperBodyExercises
+            countList += upperBodyExercisesCount
+        }
+        
+        if lowerBodySwitch == true {
+            exerciseList += lowerBodyExercises
+            countList += lowerBodyExercisesCount
+        }
+        
+        if cardioSwitch == true {
+            exerciseList += cardioExercises
+            countList += cardioExercisesCount
+        }
+        
+        if coreSwitch == true {
+            exerciseList += coreExercises
+            countList += coreExercisesCount
+        }
+        
+        if exerciseList == [] {
+            let alert = UIAlertController(title: "EXERCISES MUST BE CHOSEN", message: "CHOOSE AT LEAST ONE AREA", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true)
+            return
+        }
+        
         let number = Int.random(in: 0 ... countList.count - 1)
         mainTitle.text = "DO"
         countLabel.text = "\(countList[number])"
         exerciseLabel.text = "\(exerciseList[number])"
         (sender as! UIButton).setTitle("NEXT", for: [])
         if isTimerRunning == false {
+            seconds = Int(sliderValue.value)
             runTimer()
         }
+        
+        exerciseList = []
+        countList = []
     }
     
 //Time keeper
@@ -75,7 +152,7 @@ class ViewController: UIViewController {
     
     @IBAction func resetTimer(_ sender: Any) {
         timer.invalidate()
-        seconds = 60
+        seconds = Int(sliderValue.value)
         timerLabel.text = timeString(time: TimeInterval(seconds))
         isTimerRunning = false
     }
