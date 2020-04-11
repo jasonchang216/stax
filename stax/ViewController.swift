@@ -20,6 +20,24 @@ class ViewController: UIViewController {
     }
 
 //Settings controls
+    @IBOutlet weak var settingViewTopConstraint: NSLayoutConstraint!
+    
+    var settingMenuShowing = false
+
+    @IBAction func openSettingMenu(_ sender: Any) {
+        if settingMenuShowing == true {
+            settingViewTopConstraint.constant = -230
+            UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseIn, animations: {
+                self.view.layoutIfNeeded()
+            })
+        } else {
+            settingViewTopConstraint.constant = 0
+            UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseIn, animations: {
+                self.view.layoutIfNeeded()
+            })
+        }
+        settingMenuShowing = !settingMenuShowing
+    }
     
     var upperBodySwitch: Bool = true
     var lowerBodySwitch: Bool = true
@@ -48,7 +66,7 @@ class ViewController: UIViewController {
     }
     
 
-    //Exercise List
+//Exercise List
     let upperBodyExercises: [String] = ["PUSHUPS",   "UP-DOWN PLANKS"]
     let upperBodyExercisesCount: [String] = ["10", "10"]
     
@@ -62,6 +80,7 @@ class ViewController: UIViewController {
     
     let coreExercises: [String] = ["SECONDS OF PLANK", "V-UPS"]
     let coreExercisesCount: [String] = ["15", "10"]
+    
     
 //Exercise randomizer
     @IBOutlet weak var countLabel: UILabel!
@@ -114,8 +133,8 @@ class ViewController: UIViewController {
         countList = []
     }
     
-//Time keeper
     
+//Time keeper
     @IBOutlet weak var timerLabel: UILabel!
     var seconds = 60
     var timer = Timer()
@@ -146,6 +165,9 @@ class ViewController: UIViewController {
     }
     
     func runTimer() {
+        if sliderValue.value < 1 {
+            return
+        }
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(ViewController.updateTimer)),userInfo: nil, repeats: true)
         isTimerRunning = true
     }
