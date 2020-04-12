@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
  
@@ -17,6 +18,9 @@ class ViewController: UIViewController {
         countLabel.text = " "
         exerciseLabel.text = " "
         timerLabel.text = timeString(time: TimeInterval(sliderValue.value))
+        sessionCountLabel.text = "0"
+        getLatestData()
+        previousCountLabel.text = String(recordCount)
     }
 
 //Settings controls
@@ -81,8 +85,49 @@ class ViewController: UIViewController {
     let coreExercises: [String] = ["SECONDS OF PLANK", "V-UPS"]
     let coreExercisesCount: [String] = ["15", "10"]
     
+ 
+// Exercie counter
     
-//Exercise randomizer
+    @IBOutlet weak var previousCountLabel: UILabel!
+    @IBOutlet weak var sessionCountLabel: UILabel!
+    
+    var sessionCount: Int = 0
+    var recordCount = Int()
+    
+    func save(sessionCount: Int) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+        return
+        }
+        
+        let managedContext =  appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "Sessions", in: managedContext)!
+        let session = NSManagedObject(entity: entity, insertInto: managedContext)
+        session.setValue(sessionCount, forKeyPath: "sessions")
+        do {
+            try managedContext.save()
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+    }
+    
+    func getLatestData()
+    {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Sessions")
+        request.returnsObjectsAsFaults = false
+        do {
+            let result = try context.fetch(request)
+            for data in result as! [NSManagedObject]
+            {
+                recordCount = data.value(forKey: "sessions") as! Int
+            }
+                
+        } catch {
+            print("Failed")
+        }
+    }
+    
+// Exercise randomizer
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var exerciseLabel: UILabel!
     @IBOutlet weak var mainTitle: UILabel!
@@ -128,6 +173,9 @@ class ViewController: UIViewController {
             seconds = Int(sliderValue.value)
             runTimer()
         }
+        
+        sessionCount += 1
+        sessionCountLabel.text = String(sessionCount)
         
         exerciseList = []
         countList = []
@@ -177,6 +225,7 @@ class ViewController: UIViewController {
         seconds = Int(sliderValue.value)
         timerLabel.text = timeString(time: TimeInterval(seconds))
         isTimerRunning = false
+        self.save(sessionCount: sessionCount)
     }
     
 }
