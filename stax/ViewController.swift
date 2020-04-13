@@ -19,11 +19,13 @@ class ViewController: UIViewController {
         exerciseLabel.text = " "
         timerLabel.text = timeString(time: TimeInterval(sliderValue.value))
         sessionCountLabel.text = "0"
-        getLatestData()
-        previousCountLabel.text = String(recordCount)
+        getPreviousData()
+        previousCountLabel.text = String(previousCount)
+        getRecordData()
+        recordCountLabel.text = String(recordCount)
     }
 
-//Settings controls
+// MARK: - Settings Control
     @IBOutlet weak var settingViewTopConstraint: NSLayoutConstraint!
     
     var settingMenuShowing = false
@@ -70,7 +72,7 @@ class ViewController: UIViewController {
     }
     
 
-//Exercise List
+// MARK: -SExercise List
     let upperBodyExercises: [String] = ["PUSHUPS",   "UP-DOWN PLANKS"]
     let upperBodyExercisesCount: [String] = ["10", "10"]
     
@@ -86,12 +88,13 @@ class ViewController: UIViewController {
     let coreExercisesCount: [String] = ["15", "10"]
     
  
-// Exercie counter
-    
+// MARK: - Exercise Counter Saver and Fetcher
     @IBOutlet weak var previousCountLabel: UILabel!
     @IBOutlet weak var sessionCountLabel: UILabel!
+    @IBOutlet weak var recordCountLabel: UILabel!
     
     var sessionCount: Int = 0
+    var previousCount = Int()
     var recordCount = Int()
     
     func save(sessionCount: Int) {
@@ -110,11 +113,28 @@ class ViewController: UIViewController {
         }
     }
     
-    func getLatestData()
-    {
+    func getPreviousData() {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Sessions")
         request.returnsObjectsAsFaults = false
+        do {
+            let result = try context.fetch(request)
+            for data in result as! [NSManagedObject]
+            {
+                previousCount = data.value(forKey: "sessions") as! Int
+            }
+                
+        } catch {
+            print("Failed")
+        }
+    }
+    
+    func getRecordData() {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Sessions")
+        request.fetchLimit = 1
+        var highestCount : NSSortDescriptor = NSSortDescriptor(key: "sessions", ascending: false)
+        request.sortDescriptors = [highestCount]
         do {
             let result = try context.fetch(request)
             for data in result as! [NSManagedObject]
@@ -127,7 +147,7 @@ class ViewController: UIViewController {
         }
     }
     
-// Exercise randomizer
+// MARK: - Exercise Randomizer
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var exerciseLabel: UILabel!
     @IBOutlet weak var mainTitle: UILabel!
@@ -182,7 +202,7 @@ class ViewController: UIViewController {
     }
     
     
-//Time keeper
+// MARK: - Time Keeper
     @IBOutlet weak var timerLabel: UILabel!
     var seconds = 60
     var timer = Timer()
@@ -225,7 +245,20 @@ class ViewController: UIViewController {
         seconds = Int(sliderValue.value)
         timerLabel.text = timeString(time: TimeInterval(seconds))
         isTimerRunning = false
+        if sessionCount == 0 {
+            return
+        } else {
         self.save(sessionCount: sessionCount)
+            }
+        sessionCount = 0
+        sessionCountLabel.text = "0"
+        mainTitle.text = "TIME TO WORKOUT"
+        countLabel.text = " "
+        exerciseLabel.text = " "
+        getPreviousData()
+        previousCountLabel.text = String(previousCount)
+        getRecordData()
+        recordCountLabel.text = String(recordCount)
     }
     
 }

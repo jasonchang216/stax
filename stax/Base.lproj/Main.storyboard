@@ -231,6 +231,7 @@
                         <outlet property="exerciseLabel" destination="Maj-Wg-kAc" id="KSb-rn-Arc"/>
                         <outlet property="mainTitle" destination="vVj-XR-0nM" id="NMT-5H-IIK"/>
                         <outlet property="previousCountLabel" destination="D8o-Tp-t05" id="AEg-WB-Z4w"/>
+                        <outlet property="recordCountLabel" destination="6nJ-QI-tT2" id="239-kG-g7p"/>
                         <outlet property="sessionCountLabel" destination="4v5-Kp-TSW" id="aMp-pz-jyC"/>
                         <outlet property="settingViewTopConstraint" destination="jpI-5s-br2" id="n8s-9X-kXP"/>
                         <outlet property="sliderValue" destination="x0E-2i-tOL" id="Nkd-AX-IlS"/>
