@@ -224,11 +224,19 @@ class ViewController: UIViewController {
             countLabel.text = " "
             exerciseLabel.text = " "
             isTimerRunning = false
-            seconds = 60
-            
+            self.save(sessionCount: sessionCount)
             let alert = UIAlertController(title: "WORKOUT COMPLETE", message: "YOU'RE DONE.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             self.present(alert, animated: true)
+            sessionCount = 0
+            sessionCountLabel.text = "0"
+            mainTitle.text = "TIME TO WORKOUT"
+            countLabel.text = " "
+            exerciseLabel.text = " "
+            getPreviousData()
+            previousCountLabel.text = String(previousCount)
+            getRecordData()
+            recordCountLabel.text = String(recordCount)
         }
     }
     
