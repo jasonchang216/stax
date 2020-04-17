@@ -72,7 +72,7 @@ class ViewController: UIViewController {
     }
     
 
-// MARK: -SExercise List
+// MARK: - Exercise List
     let upperBodyExercises: [String] = ["PUSHUPS",   "UP-DOWN PLANKS"]
     let upperBodyExercisesCount: [String] = ["10", "10"]
     
@@ -207,6 +207,7 @@ class ViewController: UIViewController {
     var seconds = 60
     var timer = Timer()
     var isTimerRunning = false
+    var resumeTapped = false
     
     func timeString(time: TimeInterval) -> String {
         let minutes = Int(time) / 60 % 60
@@ -267,6 +268,18 @@ class ViewController: UIViewController {
         previousCountLabel.text = String(previousCount)
         getRecordData()
         recordCountLabel.text = String(recordCount)
+    }
+    
+    @IBAction func pauseTimer(_ sender: Any) {
+        if self.resumeTapped == false {
+             timer.invalidate()
+             self.resumeTapped = true
+            (sender as! UIButton).setTitle("RESUME", for: [])
+        } else {
+             runTimer()
+             self.resumeTapped = false
+            (sender as! UIButton).setTitle("PAUSE", for: [])
+        }
     }
     
 }
