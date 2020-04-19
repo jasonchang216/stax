@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="viewBackground" translatesAutoresizingMaskIntoConstraints="NO" id="54R-u7-fC3">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="-17" y="44" width="913" height="852"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uGN-pU-597">
@@ -68,7 +68,10 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="149" id="DhH-t3-CfG"/>
+                                    <constraint firstAttribute="width" constant="372" id="AHK-tu-pHw"/>
+                                    <constraint firstAttribute="height" constant="149" id="DhH-t3-CfG">
+                                        <variation key="heightClass=compact-widthClass=regular" constant="132"/>
+                                    </constraint>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -100,10 +103,12 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nap-8x-FPZ">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nap-8x-FPZ">
                                         <rect key="frame" x="126" y="217" width="120" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Bvo-oU-PSA"/>
+                                        </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="LET'S START"/>
                                         <userDefinedRuntimeAttributes>
@@ -118,16 +123,28 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="W1d-uG-ZTN" firstAttribute="top" secondItem="vVj-XR-0nM" secondAttribute="bottom" constant="8" id="3ph-9U-YXW"/>
+                                    <constraint firstAttribute="trailing" secondItem="nap-8x-FPZ" secondAttribute="trailing" constant="126" id="0cn-uR-FjS"/>
+                                    <constraint firstItem="W1d-uG-ZTN" firstAttribute="top" secondItem="vVj-XR-0nM" secondAttribute="bottom" constant="8" id="3ph-9U-YXW">
+                                        <variation key="heightClass=compact-widthClass=regular" constant="25"/>
+                                    </constraint>
                                     <constraint firstAttribute="trailing" secondItem="Maj-Wg-kAc" secondAttribute="trailing" constant="24" id="I5k-hd-ywq"/>
+                                    <constraint firstAttribute="bottom" secondItem="nap-8x-FPZ" secondAttribute="bottom" constant="20" id="NwV-j2-9Ds">
+                                        <variation key="heightClass=compact-widthClass=regular" constant="25"/>
+                                    </constraint>
+                                    <constraint firstItem="nap-8x-FPZ" firstAttribute="leading" secondItem="CPc-Hm-dYN" secondAttribute="leading" constant="126" id="OrO-FL-nLs"/>
                                     <constraint firstItem="vVj-XR-0nM" firstAttribute="leading" secondItem="CPc-Hm-dYN" secondAttribute="leading" constant="24" id="PyR-Ck-FvM"/>
+                                    <constraint firstAttribute="width" constant="372" id="Uan-YZ-j24"/>
                                     <constraint firstItem="W1d-uG-ZTN" firstAttribute="leading" secondItem="CPc-Hm-dYN" secondAttribute="leading" constant="115" id="Ujo-cY-b0y"/>
                                     <constraint firstAttribute="trailing" secondItem="W1d-uG-ZTN" secondAttribute="trailing" constant="115" id="WIJ-hP-sPQ"/>
                                     <constraint firstItem="vVj-XR-0nM" firstAttribute="top" secondItem="CPc-Hm-dYN" secondAttribute="top" constant="10" id="ZKI-ob-aU0"/>
                                     <constraint firstItem="Maj-Wg-kAc" firstAttribute="leading" secondItem="CPc-Hm-dYN" secondAttribute="leading" constant="24" id="Zs0-uq-xAP"/>
-                                    <constraint firstAttribute="height" constant="277" id="dzD-Jo-0Hn"/>
+                                    <constraint firstAttribute="height" constant="277" id="dzD-Jo-0Hn">
+                                        <variation key="heightClass=compact-widthClass=regular" constant="331"/>
+                                    </constraint>
                                     <constraint firstAttribute="trailing" secondItem="vVj-XR-0nM" secondAttribute="trailing" constant="24" id="jrF-uC-TWi"/>
-                                    <constraint firstItem="Maj-Wg-kAc" firstAttribute="top" secondItem="W1d-uG-ZTN" secondAttribute="bottom" constant="13" id="kkI-OR-uVe"/>
+                                    <constraint firstItem="Maj-Wg-kAc" firstAttribute="top" secondItem="W1d-uG-ZTN" secondAttribute="bottom" constant="13" id="kkI-OR-uVe">
+                                        <variation key="heightClass=compact-widthClass=regular" constant="25"/>
+                                    </constraint>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -179,6 +196,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="1fy-5F-QfN"/>
                                     <constraint firstAttribute="height" constant="173" id="jvf-RG-7WT"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -187,8 +205,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4fw-O2-bhg">
-                                <rect key="frame" x="0.0" y="-230" width="414" height="230"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fw-O2-bhg">
+                                <rect key="frame" x="0.0" y="-142" width="414" height="230"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Upper Body" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="298-ot-O2O">
                                         <rect key="frame" x="18" y="57" width="92" height="21"/>
@@ -270,27 +288,61 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="TpJ-pa-Oz8"/>
                                     <constraint firstAttribute="height" constant="230" id="VXd-1m-ZKn"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="230" id="czG-f0-BdQ"/>
                                 </constraints>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="TpJ-pa-Oz8"/>
+                                        <exclude reference="czG-f0-BdQ"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="EGa-TP-dHf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4eK-1n-fzR"/>
-                            <constraint firstItem="uGN-pU-597" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="9xH-Vj-mF7"/>
-                            <constraint firstItem="4fw-O2-bhg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Twc-Yn-Gxa"/>
-                            <constraint firstItem="CPc-Hm-dYN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="UpV-45-OqA"/>
+                            <constraint firstItem="uGN-pU-597" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="9xH-Vj-mF7">
+                                <variation key="heightClass=compact-widthClass=regular" constant="400"/>
+                            </constraint>
+                            <constraint firstItem="4fw-O2-bhg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Twc-Yn-Gxa">
+                                <variation key="heightClass=compact-widthClass=regular" constant="-413"/>
+                            </constraint>
+                            <constraint firstItem="CPc-Hm-dYN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="UpV-45-OqA">
+                                <variation key="heightClass=compact-widthClass=regular" constant="-1"/>
+                            </constraint>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uGN-pU-597" secondAttribute="trailing" constant="20" id="UxF-Sj-r70"/>
-                            <constraint firstItem="4fw-O2-bhg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WRa-3v-sQH"/>
+                            <constraint firstItem="4fw-O2-bhg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WRa-3v-sQH">
+                                <variation key="heightClass=compact-widthClass=regular" constant="0.0"/>
+                            </constraint>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EGa-TP-dHf" secondAttribute="trailing" constant="20" id="baF-p0-DkM"/>
-                            <constraint firstItem="EGa-TP-dHf" firstAttribute="top" secondItem="CPc-Hm-dYN" secondAttribute="bottom" constant="36" id="dUT-Hz-B64"/>
-                            <constraint firstItem="uGN-pU-597" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="h39-Rz-Lfe"/>
+                            <constraint firstItem="EGa-TP-dHf" firstAttribute="top" secondItem="CPc-Hm-dYN" secondAttribute="bottom" constant="36" id="dUT-Hz-B64">
+                                <variation key="heightClass=compact-widthClass=regular" constant="-173"/>
+                            </constraint>
+                            <constraint firstItem="uGN-pU-597" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="h39-Rz-Lfe">
+                                <variation key="heightClass=compact-widthClass=regular" constant="10"/>
+                            </constraint>
                             <constraint firstItem="4fw-O2-bhg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-230" id="jpI-5s-br2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CPc-Hm-dYN" secondAttribute="trailing" constant="20" id="nUC-Mt-spB"/>
-                            <constraint firstItem="CPc-Hm-dYN" firstAttribute="top" secondItem="uGN-pU-597" secondAttribute="bottom" constant="48" id="pbp-09-2Jy"/>
+                            <constraint firstItem="CPc-Hm-dYN" firstAttribute="top" secondItem="uGN-pU-597" secondAttribute="bottom" constant="48" id="pbp-09-2Jy">
+                                <variation key="heightClass=compact-widthClass=regular" constant="-132"/>
+                            </constraint>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EGa-TP-dHf" secondAttribute="bottom" constant="51" id="rlM-4w-8R8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="nUC-Mt-spB"/>
+                                <exclude reference="rlM-4w-8R8"/>
+                                <exclude reference="9xH-Vj-mF7"/>
+                                <include reference="Twc-Yn-Gxa"/>
+                                <include reference="WRa-3v-sQH"/>
+                                <include reference="pbp-09-2Jy"/>
+                                <exclude reference="4eK-1n-fzR"/>
+                                <include reference="dUT-Hz-B64"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="C7q-nZ-5uh">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="dial" catalog="system" id="Neq-U3-0t6">
@@ -313,7 +365,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="844.92753623188412" y="126.5625"/>
+            <point key="canvasLocation" x="841.74107142857144" y="123.18840579710145"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="e98-aO-wrU">
