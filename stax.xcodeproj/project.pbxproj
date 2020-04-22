@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E1512AF244FE4F000D5C158 /* NSLayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1512A9244FE4EE00D5C158 /* NSLayoutHelper.swift */; };
+		9E1512B0244FE4F000D5C158 /* UIButtonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1512AA244FE4EF00D5C158 /* UIButtonHelper.swift */; };
+		9E1512B1244FE4F000D5C158 /* DeviceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1512AB244FE4EF00D5C158 /* DeviceHelper.swift */; };
+		9E1512B2244FE4F000D5C158 /* UITextFieldHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1512AC244FE4EF00D5C158 /* UITextFieldHelper.swift */; };
+		9E1512B3244FE4F000D5C158 /* UILabelHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1512AD244FE4EF00D5C158 /* UILabelHelper.swift */; };
+		9E1512B4244FE4F000D5C158 /* UITextViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1512AE244FE4F000D5C158 /* UITextViewHelper.swift */; };
 		9E1E1E26243C23A40051C2E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1E1E25243C23A40051C2E0 /* AppDelegate.swift */; };
 		9E1E1E28243C23A40051C2E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1E1E27243C23A40051C2E0 /* ViewController.swift */; };
 		9E1E1E2B243C23A40051C2E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1E1E29243C23A40051C2E0 /* Main.storyboard */; };
@@ -35,6 +41,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E1512A9244FE4EE00D5C158 /* NSLayoutHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSLayoutHelper.swift; path = "../../../Downloads/Layout-Helper-master/LayoutHelper/Classes/NSLayoutHelper.swift"; sourceTree = "<group>"; };
+		9E1512AA244FE4EF00D5C158 /* UIButtonHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIButtonHelper.swift; path = "../../../Downloads/Layout-Helper-master/LayoutHelper/Classes/UIButtonHelper.swift"; sourceTree = "<group>"; };
+		9E1512AB244FE4EF00D5C158 /* DeviceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceHelper.swift; path = "../../../Downloads/Layout-Helper-master/LayoutHelper/Classes/DeviceHelper.swift"; sourceTree = "<group>"; };
+		9E1512AC244FE4EF00D5C158 /* UITextFieldHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITextFieldHelper.swift; path = "../../../Downloads/Layout-Helper-master/LayoutHelper/Classes/UITextFieldHelper.swift"; sourceTree = "<group>"; };
+		9E1512AD244FE4EF00D5C158 /* UILabelHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UILabelHelper.swift; path = "../../../Downloads/Layout-Helper-master/LayoutHelper/Classes/UILabelHelper.swift"; sourceTree = "<group>"; };
+		9E1512AE244FE4F000D5C158 /* UITextViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITextViewHelper.swift; path = "../../../Downloads/Layout-Helper-master/LayoutHelper/Classes/UITextViewHelper.swift"; sourceTree = "<group>"; };
 		9E1E1E22243C23A40051C2E0 /* stax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E1E1E25243C23A40051C2E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E1E1E27243C23A40051C2E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +111,12 @@
 		9E1E1E24243C23A40051C2E0 /* stax */ = {
 			isa = PBXGroup;
 			children = (
+				9E1512AB244FE4EF00D5C158 /* DeviceHelper.swift */,
+				9E1512A9244FE4EE00D5C158 /* NSLayoutHelper.swift */,
+				9E1512AA244FE4EF00D5C158 /* UIButtonHelper.swift */,
+				9E1512AD244FE4EF00D5C158 /* UILabelHelper.swift */,
+				9E1512AC244FE4EF00D5C158 /* UITextFieldHelper.swift */,
+				9E1512AE244FE4F000D5C158 /* UITextViewHelper.swift */,
 				9E1E1E25243C23A40051C2E0 /* AppDelegate.swift */,
 				9E1E1E27243C23A40051C2E0 /* ViewController.swift */,
 				9E1E1E29243C23A40051C2E0 /* Main.storyboard */,
@@ -260,8 +278,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E1E1E28243C23A40051C2E0 /* ViewController.swift in Sources */,
+				9E1512B1244FE4F000D5C158 /* DeviceHelper.swift in Sources */,
 				9E1E1E26243C23A40051C2E0 /* AppDelegate.swift in Sources */,
+				9E1512AF244FE4F000D5C158 /* NSLayoutHelper.swift in Sources */,
+				9E1512B3244FE4F000D5C158 /* UILabelHelper.swift in Sources */,
+				9E1512B4244FE4F000D5C158 /* UITextViewHelper.swift in Sources */,
+				9E1512B0244FE4F000D5C158 /* UIButtonHelper.swift in Sources */,
 				9ED858C22443B12900AEBA3E /* Model.xcdatamodeld in Sources */,
+				9E1512B2244FE4F000D5C158 /* UITextFieldHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
