@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="stax" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uGN-pU-597">
-                                <rect key="frame" x="22" y="141" width="370" height="148"/>
+                                <rect key="frame" x="22" y="117" width="370" height="148"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Workout" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Kw-lj-bLx">
                                         <rect key="frame" x="26" y="12" width="88" height="44"/>
@@ -104,7 +104,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CPc-Hm-dYN">
-                                <rect key="frame" x="22" y="342" width="370" height="276"/>
+                                <rect key="frame" x="22" y="325" width="370" height="276"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DO" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="16" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vVj-XR-0nM">
                                         <rect key="frame" x="22" y="10" width="324" height="36"/>
@@ -175,7 +175,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EGa-TP-dHf">
-                                <rect key="frame" x="22" y="671" width="370" height="172"/>
+                                <rect key="frame" x="22" y="661" width="370" height="162"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fAv-2q-bI8">
                                         <rect key="frame" x="51" y="4" width="268" height="120"/>
@@ -187,7 +187,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4g-hg-OSe">
-                                        <rect key="frame" x="51" y="128" width="100" height="40"/>
+                                        <rect key="frame" x="51" y="128" width="75" height="30"/>
                                         <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="U4g-hg-OSe" secondAttribute="height" multiplier="5:2" id="5fr-eZ-upp"/>
@@ -204,7 +204,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tvv-6X-XEt">
-                                        <rect key="frame" x="219" y="128" width="100" height="40"/>
+                                        <rect key="frame" x="244" y="128" width="75" height="30"/>
                                         <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="tvv-6X-XEt" secondAttribute="height" multiplier="5:2" id="Y8d-fa-1a5"/>
@@ -241,7 +241,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fw-O2-bhg">
-                                <rect key="frame" x="0.0" y="-291" width="414" height="278"/>
+                                <rect key="frame" x="0.0" y="-335" width="414" height="278"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Upper Body" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="298-ot-O2O">
                                         <rect key="frame" x="28" y="109" width="92" height="21"/>
@@ -321,7 +321,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUs-pW-EG8">
-                                <rect key="frame" x="157" y="44" width="100" height="34"/>
+                                <rect key="frame" x="157" y="0.0" width="100" height="34"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="SETTINGS">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -346,14 +346,14 @@
                                 </userDefinedRuntimeAttributes>
                             </constraint>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nUs-pW-EG8" secondAttribute="trailing" constant="157" id="0t5-hv-267"/>
-                            <constraint firstItem="uGN-pU-597" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="141" id="2YX-t7-TGF" customClass="NSLayoutHelper" customModule="stax" customModuleProvider="target">
+                            <constraint firstItem="uGN-pU-597" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="117" id="2YX-t7-TGF" customClass="NSLayoutHelper" customModule="stax" customModuleProvider="target">
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iPhone8Plus">
                                         <real key="value" value="68"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </constraint>
-                            <constraint firstItem="EGa-TP-dHf" firstAttribute="top" secondItem="CPc-Hm-dYN" secondAttribute="bottom" constant="53" id="4fz-4g-ajh" customClass="NSLayoutHelper" customModule="stax" customModuleProvider="target">
+                            <constraint firstItem="EGa-TP-dHf" firstAttribute="top" secondItem="CPc-Hm-dYN" secondAttribute="bottom" constant="60" id="4fz-4g-ajh" customClass="NSLayoutHelper" customModule="stax" customModuleProvider="target">
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iPhone8Plus">
                                         <real key="value" value="24"/>
@@ -365,7 +365,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CPc-Hm-dYN" secondAttribute="trailing" constant="22" id="CIB-Ry-osx"/>
                             <constraint firstAttribute="trailing" secondItem="4fw-O2-bhg" secondAttribute="trailing" id="CJn-4R-U4K"/>
                             <constraint firstItem="uGN-pU-597" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="Lq5-dg-KTh"/>
-                            <constraint firstItem="CPc-Hm-dYN" firstAttribute="top" secondItem="uGN-pU-597" secondAttribute="bottom" constant="53" id="N8w-eL-fvj" customClass="NSLayoutHelper" customModule="stax" customModuleProvider="target">
+                            <constraint firstItem="CPc-Hm-dYN" firstAttribute="top" secondItem="uGN-pU-597" secondAttribute="bottom" constant="60" id="N8w-eL-fvj" customClass="NSLayoutHelper" customModule="stax" customModuleProvider="target">
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iPhone8Plus">
                                         <real key="value" value="24"/>
