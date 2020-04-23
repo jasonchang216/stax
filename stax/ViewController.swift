@@ -31,17 +31,19 @@ class ViewController: UIViewController {
     
     var settingMenuShowing = false
 
-    @IBAction func openSettingMenu(_ sender: Any) {
+    @IBAction func openSettings(_ sender: Any) {
         if settingMenuShowing == true {
-            settingViewTopConstraint.constant = -230
+            settingViewTopConstraint.constant = -335
             UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseIn, animations: {
                 self.view.layoutIfNeeded()
             })
+            (sender as! UIButton).setTitle("SETTINGS", for: [])
         } else {
-            settingViewTopConstraint.constant = 0
+            settingViewTopConstraint.constant = -44
             UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseIn, animations: {
                 self.view.layoutIfNeeded()
             })
+            (sender as! UIButton).setTitle("CLOSE", for: [])
         }
         settingMenuShowing = !settingMenuShowing
     }
