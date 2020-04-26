@@ -14,7 +14,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named:"viewBackground")!)
+        self.view.addBackground()
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named:"viewBackground")!)
         mainTitle.text = "TIME TO WORKOUT"
         countLabel.text = " "
         exerciseLabel.text = " "
@@ -287,3 +288,25 @@ class ViewController: UIViewController {
     
 }
 
+extension UIView {
+    func addBackground(imageName: String = "viewBackground", contentMode: UIView.ContentMode = .scaleAspectFill) {
+        // setup the UIImageView
+        let backgroundImageView = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImageView.image = UIImage(named: imageName)
+        backgroundImageView.contentMode = contentMode
+        backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
+        backgroundImageView.isOpaque = false
+        backgroundImageView.alpha = 0.5
+
+        addSubview(backgroundImageView)
+        sendSubviewToBack(backgroundImageView)
+
+        // adding NSLayoutConstraints
+        let leadingConstraint = NSLayoutConstraint(item: backgroundImageView, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1.0, constant: 0.0)
+        let trailingConstraint = NSLayoutConstraint(item: backgroundImageView, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1.0, constant: 0.0)
+        let topConstraint = NSLayoutConstraint(item: backgroundImageView, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1.0, constant: 0.0)
+        let bottomConstraint = NSLayoutConstraint(item: backgroundImageView, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1.0, constant: 0.0)
+
+        NSLayoutConstraint.activate([leadingConstraint, trailingConstraint, topConstraint, bottomConstraint])
+    }
+}
