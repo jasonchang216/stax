@@ -58,6 +58,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var sliderValue: UISlider!
     @IBAction func timerSlider(_ sender: Any) {
         timerLabel.text = timeString(time: TimeInterval(sliderValue.value))
+        if sliderValue.value == 0 {
+            timerViewContainer.isHidden = true
+        } else {
+            timerViewContainer.isHidden = false
+        }
     }
     
     @IBAction func upperBodySwitcher(_ sender: Any) {
@@ -116,6 +121,25 @@ class ViewController: UIViewController {
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
         }
+    }
+    
+    @IBAction func resetRecord(_ sender: Any) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+        return
+        }
+        
+        let managedContext =  appDelegate.persistentContainer.viewContext
+        let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Sessions")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
+
+        do {
+            try managedContext.execute(deleteRequest)
+            try managedContext.save()
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+        previousCountLabel.text = String(0)
+        recordCountLabel.text = String(0)
     }
     
     func getPreviousData() {
@@ -206,8 +230,55 @@ class ViewController: UIViewController {
         countList = []
     }
     
+    @IBAction func skipExercise(_ sender: Any) {
+        if upperBodySwitch == true {
+            exerciseList += upperBodyExercises
+            countList += upperBodyExercisesCount
+        }
+        
+        if lowerBodySwitch == true {
+            exerciseList += lowerBodyExercises
+            countList += lowerBodyExercisesCount
+        }
+        
+        if cardioSwitch == true {
+            exerciseList += cardioExercises
+            countList += cardioExercisesCount
+        }
+        
+        if coreSwitch == true {
+            exerciseList += coreExercises
+            countList += coreExercisesCount
+        }
+        
+        if exerciseList == [] {
+            let alert = UIAlertController(title: "EXERCISES MUST BE CHOSEN", message: "CHOOSE AT LEAST ONE AREA", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true)
+            return
+        }
+        
+        let number = Int.random(in: 0 ... countList.count - 1)
+        mainTitle.text = "DO"
+        countLabel.text = "\(countList[number])"
+        exerciseLabel.text = "\(exerciseList[number])"
+        if isTimerRunning == false {
+            seconds = Int(sliderValue.value)
+            runTimer()
+        }
+        
+        exerciseList = []
+        countList = []
+    }
+    
+    
+    
     
 // MARK: - Time Keeper
+    
+    @IBOutlet weak var timerViewContainer: UIView!
+    
+    
     @IBOutlet weak var timerLabel: UILabel!
     var seconds = 60
     var timer = Timer()
