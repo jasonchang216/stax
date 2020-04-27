@@ -516,8 +516,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="cardioUISwitch" destination="3Ga-SI-8rR" id="97L-pP-8w0"/>
+                        <outlet property="coreUISwitch" destination="N0s-H4-0r8" id="0zi-4b-edp"/>
                         <outlet property="countLabel" destination="W1d-uG-ZTN" id="uxu-bH-oZw"/>
                         <outlet property="exerciseLabel" destination="Maj-Wg-kAc" id="KSb-rn-Arc"/>
+                        <outlet property="lowerBodyUISwitch" destination="3vf-4A-ztQ" id="3GP-dc-yfh"/>
                         <outlet property="mainTitle" destination="vVj-XR-0nM" id="NMT-5H-IIK"/>
                         <outlet property="previousCountLabel" destination="D8o-Tp-t05" id="AEg-WB-Z4w"/>
                         <outlet property="recordCountLabel" destination="6nJ-QI-tT2" id="239-kG-g7p"/>
@@ -526,6 +529,7 @@
                         <outlet property="sliderValue" destination="x0E-2i-tOL" id="Nkd-AX-IlS"/>
                         <outlet property="timerLabel" destination="fAv-2q-bI8" id="pfq-MX-zwX"/>
                         <outlet property="timerViewContainer" destination="EGa-TP-dHf" id="czj-R0-TdI"/>
+                        <outlet property="upperBodyUISwitch" destination="MUb-Cc-wiB" id="zaL-EZ-Tn9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

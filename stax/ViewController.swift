@@ -16,23 +16,45 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.view.addBackground()
-        //self.view.backgroundColor = UIColor(patternImage: UIImage(named:"viewBackground")!)
         mainTitle.text = "TIME TO WORKOUT"
         countLabel.text = " "
         exerciseLabel.text = " "
-        timerLabel.text = timeString(time: TimeInterval(sliderValue.value))
         sessionCountLabel.text = "0"
         getPreviousData()
         previousCountLabel.text = String(previousCount)
         getRecordData()
         recordCountLabel.text = String(recordCount)
+
+        if (defaults.object(forKey: "upperBodySwitch") != nil) {
+            upperBodyUISwitch.isOn = defaults.bool(forKey: "upperBodySwitch")
+        }
+        
+        if (defaults.object(forKey: "lowerBodySwitch") != nil) {
+            lowerBodyUISwitch.isOn = defaults.bool(forKey: "lowerBodySwitch")
+        }
+        
+        if (defaults.object(forKey: "cardioSwitch") != nil) {
+            cardioUISwitch.isOn = defaults.bool(forKey: "cardioSwitch")
+        }
+        
+        if (defaults.object(forKey: "coreSwitch") != nil) {
+            coreUISwitch.isOn = defaults.bool(forKey: "coreSwitch")
+        }
+        
+        if (defaults.object(forKey: "timer") != nil) {
+            sliderValue.value = defaults.float(forKey: "timer")
+        }
+        
+        timerLabel.text = timeString(time: TimeInterval(sliderValue.value))
+        
     }
 
 // MARK: - Settings Control
     @IBOutlet weak var settingViewTopConstraint: NSLayoutConstraint!
     
     var settingMenuShowing = false
-
+    let defaults = UserDefaults.standard
+    
     @IBAction func openSettings(_ sender: Any) {
         if settingMenuShowing == true {
             settingViewTopConstraint.constant = -335
@@ -50,14 +72,10 @@ class ViewController: UIViewController {
         settingMenuShowing = !settingMenuShowing
     }
     
-    var upperBodySwitch: Bool = true
-    var lowerBodySwitch: Bool = true
-    var cardioSwitch: Bool = true
-    var coreSwitch: Bool = true
-    
     @IBOutlet weak var sliderValue: UISlider!
     @IBAction func timerSlider(_ sender: Any) {
         timerLabel.text = timeString(time: TimeInterval(sliderValue.value))
+        defaults.set(sliderValue.value, forKey: "timer")
         if sliderValue.value == 0 {
             timerViewContainer.isHidden = true
         } else {
@@ -65,20 +83,40 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var upperBodyUISwitch: UISwitch!
     @IBAction func upperBodySwitcher(_ sender: Any) {
-        upperBodySwitch = !upperBodySwitch
+        if upperBodyUISwitch.isOn {
+            defaults.set(true, forKey: "upperBodySwitch")
+        } else {
+            defaults.set(false, forKey: "upperBodySwitch")
+        }
     }
     
+    @IBOutlet weak var lowerBodyUISwitch: UISwitch!
     @IBAction func lowerBodySwitcher(_ sender: Any) {
-        lowerBodySwitch = !lowerBodySwitch
+        if lowerBodyUISwitch.isOn {
+            defaults.set(true, forKey: "lowerBodySwitch")
+        } else {
+            defaults.set(false, forKey: "lowerBodySwitch")
+        }
     }
     
+    @IBOutlet weak var cardioUISwitch: UISwitch!
     @IBAction func cardioSwitcher(_ sender: Any) {
-        cardioSwitch = !cardioSwitch
+        if cardioUISwitch.isOn {
+            defaults.set(true, forKey: "cardioSwitch")
+        } else {
+            defaults.set(false, forKey: "cardioSwitch")
+        }
     }
     
+    @IBOutlet weak var coreUISwitch: UISwitch!
     @IBAction func coreSwitcher(_ sender: Any) {
-        coreSwitch = !coreSwitch
+        if coreUISwitch.isOn {
+            defaults.set(true, forKey: "coreSwitch")
+        } else {
+            defaults.set(false, forKey: "coreSwitch")
+        }
     }
     
 
@@ -186,22 +224,44 @@ class ViewController: UIViewController {
     
     @IBAction func nextExercise(_ sender: Any) {
         
-        if upperBodySwitch == true {
+        //When there are no user defaults initially set to true
+        if defaults.object(forKey: "upperBodySwitch") == nil {
             exerciseList += upperBodyExercises
             countList += upperBodyExercisesCount
         }
         
-        if lowerBodySwitch == true {
+        if defaults.object(forKey: "lowerBodySwitch") == nil {
             exerciseList += lowerBodyExercises
             countList += lowerBodyExercisesCount
         }
         
-        if cardioSwitch == true {
+        if defaults.object(forKey: "cardioSwitch") == nil {
             exerciseList += cardioExercises
             countList += cardioExercisesCount
         }
         
-        if coreSwitch == true {
+        if defaults.object(forKey: "coreSwitch") == nil {
+            exerciseList += coreExercises
+            countList += coreExercisesCount
+        }
+        
+        //When user defaults are not empty
+        if defaults.bool(forKey: "upperBodySwitch") == true {
+            exerciseList += upperBodyExercises
+            countList += upperBodyExercisesCount
+        }
+        
+        if defaults.bool(forKey: "lowerBodySwitch") == true {
+            exerciseList += lowerBodyExercises
+            countList += lowerBodyExercisesCount
+        }
+        
+        if defaults.bool(forKey: "cardioSwitch") == true {
+            exerciseList += cardioExercises
+            countList += cardioExercisesCount
+        }
+        
+        if defaults.bool(forKey: "coreSwitch") == true {
             exerciseList += coreExercises
             countList += coreExercisesCount
         }
@@ -231,22 +291,45 @@ class ViewController: UIViewController {
     }
     
     @IBAction func skipExercise(_ sender: Any) {
-        if upperBodySwitch == true {
+        
+        //When there are no user defaults initially set to true
+        if defaults.object(forKey: "upperBodySwitch") == nil {
             exerciseList += upperBodyExercises
             countList += upperBodyExercisesCount
         }
         
-        if lowerBodySwitch == true {
+        if defaults.object(forKey: "lowerBodySwitch") == nil {
             exerciseList += lowerBodyExercises
             countList += lowerBodyExercisesCount
         }
         
-        if cardioSwitch == true {
+        if defaults.object(forKey: "cardioSwitch") == nil {
             exerciseList += cardioExercises
             countList += cardioExercisesCount
         }
         
-        if coreSwitch == true {
+        if defaults.object(forKey: "coreSwitch") == nil {
+            exerciseList += coreExercises
+            countList += coreExercisesCount
+        }
+        
+        //When user defaults are not empty
+        if defaults.bool(forKey: "upperBodySwitch") == true {
+            exerciseList += upperBodyExercises
+            countList += upperBodyExercisesCount
+        }
+        
+        if defaults.bool(forKey: "lowerBodySwitch") == true {
+            exerciseList += lowerBodyExercises
+            countList += lowerBodyExercisesCount
+        }
+        
+        if defaults.bool(forKey: "cardioSwitch") == true {
+            exerciseList += cardioExercises
+            countList += cardioExercisesCount
+        }
+        
+        if defaults.bool(forKey: "coreSwitch") == true {
             exerciseList += coreExercises
             countList += coreExercisesCount
         }
@@ -277,8 +360,6 @@ class ViewController: UIViewController {
 // MARK: - Time Keeper
     
     @IBOutlet weak var timerViewContainer: UIView!
-    
-    
     @IBOutlet weak var timerLabel: UILabel!
     var seconds = 60
     var timer = Timer()
@@ -359,6 +440,8 @@ class ViewController: UIViewController {
     }
     
 }
+
+//MARK - Background image load
 
 extension UIView {
     func addBackground(imageName: String = "viewBackground", contentMode: UIView.ContentMode = .scaleAspectFill) {
