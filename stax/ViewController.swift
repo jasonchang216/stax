@@ -40,6 +40,11 @@ class ViewController: UIViewController {
         print("previous count is now \(previousCount)")
         getRecordData()
         recordCountLabel.text = String(recordCount)
+        if (defaults.object(forKey: "timer") != nil) {
+            sliderValue.value = defaults.float(forKey: "timer")
+        }
+        
+        timerLabel.text = timeString(time: TimeInterval(sliderValue.value))
     }
 
 // MARK: - Settings Control

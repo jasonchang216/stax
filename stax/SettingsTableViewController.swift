@@ -29,6 +29,12 @@ class SettingsTableViewController: UITableViewController {
         if (defaults.object(forKey: "coreSwitch") != nil) {
             coreUISwitch.isOn = defaults.bool(forKey: "coreSwitch")
         }
+        
+        if (defaults.object(forKey: "timer") != nil) {
+            settingTimerSliderOutlet.value = defaults.float(forKey: "timer")
+        }
+        
+        settingsTimerLabel.text = timeString(time: TimeInterval(settingTimerSliderOutlet.value))
 
     }
 
@@ -72,6 +78,9 @@ class SettingsTableViewController: UITableViewController {
     }
     
     
+    var previousCount = Int()
+    var recordCount = Int()
+    
     @IBAction func resetRecord(_ sender: Any) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
         return
@@ -87,6 +96,66 @@ class SettingsTableViewController: UITableViewController {
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
         }
+        
+        getPreviousData()
+        getRecordData()
     }
+    
+    func getPreviousData() {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Sessions")
+        request.returnsObjectsAsFaults = false
+        do {
+            let result = try context.fetch(request)
+            for data in result as! [NSManagedObject]
+            {
+                previousCount = data.value(forKey: "sessions") as! Int
+            }
+            print("Previous data retrieved \(previousCount)")
+                
+        } catch {
+            print("Failed")
+        }
+    }
+    
+    func getRecordData() {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Sessions")
+        request.fetchLimit = 1
+        let highestCount : NSSortDescriptor = NSSortDescriptor(key: "sessions", ascending: false)
+        request.sortDescriptors = [highestCount]
+        do {
+            let result = try context.fetch(request)
+            for data in result as! [NSManagedObject]
+            {
+                recordCount = data.value(forKey: "sessions") as! Int
+            }
+                
+        } catch {
+            print("Failed")
+        }
+    }
+    
+    
+    
+    @IBOutlet weak var settingsTimerLabel: UILabel!
+    
+    
+    @IBOutlet weak var settingTimerSliderOutlet: UISlider!
+    
+    @IBAction func settingTimerSlider(_ sender: Any) {
+        settingsTimerLabel.text = timeString(time: TimeInterval(settingTimerSliderOutlet.value))
+        defaults.set(settingTimerSliderOutlet.value, forKey: "timer")
+    }
+    
+    func timeString(time: TimeInterval) -> String {
+        let minutes = Int(time) / 60 % 60
+        let seconds = Int(time) % 60
+        return String(format:"%02i:%02i", minutes, seconds)
+    }
+    
+    
+    
+    
     
 }
