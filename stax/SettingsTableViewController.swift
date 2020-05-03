@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class SettingsTableViewController: UITableViewController {
 
@@ -69,4 +70,23 @@ class SettingsTableViewController: UITableViewController {
             defaults.set(false, forKey: "coreSwitch")
         }
     }
+    
+    
+    @IBAction func resetRecord(_ sender: Any) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+        return
+        }
+        
+        let managedContext =  appDelegate.persistentContainer.viewContext
+        let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Sessions")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
+
+        do {
+            try managedContext.execute(deleteRequest)
+            try managedContext.save()
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+    }
+    
 }

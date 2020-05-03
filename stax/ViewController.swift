@@ -32,6 +32,15 @@ class ViewController: UIViewController {
         timerLabel.text = timeString(time: TimeInterval(sliderValue.value))
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        getPreviousData()
+        previousCountLabel.text = String(previousCount)
+        print("previous count is now \(previousCount)")
+        getRecordData()
+        recordCountLabel.text = String(recordCount)
+    }
 
 // MARK: - Settings Control
     @IBOutlet weak var settingViewTopConstraint: NSLayoutConstraint!
@@ -109,24 +118,6 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func resetRecord(_ sender: Any) {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-        return
-        }
-        
-        let managedContext =  appDelegate.persistentContainer.viewContext
-        let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Sessions")
-        let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
-
-        do {
-            try managedContext.execute(deleteRequest)
-            try managedContext.save()
-        } catch let error as NSError {
-            print("Could not save. \(error), \(error.userInfo)")
-        }
-        previousCountLabel.text = String(0)
-        recordCountLabel.text = String(0)
-    }
     
     func getPreviousData() {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -138,6 +129,7 @@ class ViewController: UIViewController {
             {
                 previousCount = data.value(forKey: "sessions") as! Int
             }
+            print("Previous data retrieved \(previousCount)")
                 
         } catch {
             print("Failed")
