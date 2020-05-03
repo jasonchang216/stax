@@ -26,10 +26,10 @@ class ViewController: UIViewController {
         recordCountLabel.text = String(recordCount)
         
         if (defaults.object(forKey: "timer") != nil) {
-            sliderValue.value = defaults.float(forKey: "timer")
+            timerValue = defaults.float(forKey: "timer")
         }
         
-        timerLabel.text = timeString(time: TimeInterval(sliderValue.value))
+        timerLabel.text = timeString(time: TimeInterval(timerValue))
         
     }
     
@@ -41,46 +41,16 @@ class ViewController: UIViewController {
         getRecordData()
         recordCountLabel.text = String(recordCount)
         if (defaults.object(forKey: "timer") != nil) {
-            sliderValue.value = defaults.float(forKey: "timer")
+            timerValue = defaults.float(forKey: "timer")
         }
         
-        timerLabel.text = timeString(time: TimeInterval(sliderValue.value))
+        timerLabel.text = timeString(time: TimeInterval(timerValue))
     }
 
 // MARK: - Settings Control
-    @IBOutlet weak var settingViewTopConstraint: NSLayoutConstraint!
-    
-    var settingMenuShowing = false
     let defaults = UserDefaults.standard
     
-    @IBAction func openSettings(_ sender: Any) {
-        if settingMenuShowing == true {
-            settingViewTopConstraint.constant = -335
-            UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseIn, animations: {
-                self.view.layoutIfNeeded()
-            })
-            (sender as! UIButton).setTitle("SETTINGS", for: [])
-        } else {
-            settingViewTopConstraint.constant = -44
-            UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseIn, animations: {
-                self.view.layoutIfNeeded()
-            })
-            (sender as! UIButton).setTitle("CLOSE", for: [])
-        }
-        settingMenuShowing = !settingMenuShowing
-    }
-    
-    @IBOutlet weak var sliderValue: UISlider!
-    @IBAction func timerSlider(_ sender: Any) {
-        timerLabel.text = timeString(time: TimeInterval(sliderValue.value))
-        defaults.set(sliderValue.value, forKey: "timer")
-        if sliderValue.value == 0 {
-            timerViewContainer.isHidden = true
-        } else {
-            timerViewContainer.isHidden = false
-        }
-    }
-    
+    var timerValue: Float = 0
 
 // MARK: - Exercise List
     let upperBodyExercises: [String] = ["PUSHUPS",   "UP-DOWN PLANKS"]
@@ -224,7 +194,7 @@ class ViewController: UIViewController {
         exerciseLabel.text = "\(exerciseList[number])"
         (sender as! UIButton).setTitle("NEXT", for: [])
         if isTimerRunning == false {
-            seconds = Int(sliderValue.value)
+            seconds = Int(timerValue)
             runTimer()
         }
         
@@ -291,7 +261,7 @@ class ViewController: UIViewController {
         countLabel.text = "\(countList[number])"
         exerciseLabel.text = "\(exerciseList[number])"
         if isTimerRunning == false {
-            seconds = Int(sliderValue.value)
+            seconds = Int(timerValue)
             runTimer()
         }
         
@@ -344,7 +314,7 @@ class ViewController: UIViewController {
     }
     
     func runTimer() {
-        if sliderValue.value < 1 {
+        if timerValue < 0.01 {
             return
         }
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(ViewController.updateTimer)),userInfo: nil, repeats: true)
@@ -353,7 +323,7 @@ class ViewController: UIViewController {
     
     @IBAction func resetTimer(_ sender: Any) {
         timer.invalidate()
-        seconds = Int(sliderValue.value)
+        seconds = Int(timerValue)
         timerLabel.text = timeString(time: TimeInterval(seconds))
         isTimerRunning = false
         if sessionCount == 0 {

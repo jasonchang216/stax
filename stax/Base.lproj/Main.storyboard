@@ -279,51 +279,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fw-O2-bhg">
-                                <rect key="frame" x="0.0" y="-291" width="414" height="278"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Timer - Zero for no timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adE-j3-vVF">
-                                        <rect key="frame" x="113" y="175" width="190" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="900" minValue="0.0" maxValue="1800" translatesAutoresizingMaskIntoConstraints="NO" id="x0E-2i-tOL">
-                                        <rect key="frame" x="84" y="204" width="248" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <connections>
-                                            <action selector="timerSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="zra-vQ-fY9"/>
-                                        </connections>
-                                    </slider>
-                                </subviews>
-                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="278" id="VXd-1m-ZKn"/>
-                                    <constraint firstAttribute="width" constant="414" id="Ywa-ik-ade" customClass="NSLayoutHelper" customModule="stax" customModuleProvider="target">
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhone8">
-                                                <real key="value" value="375"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </constraint>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUs-pW-EG8">
-                                <rect key="frame" x="157" y="44" width="100" height="34"/>
-                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="SETTINGS">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="17"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="openSettings:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xwm-VH-Ix1"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -334,16 +289,6 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iPhone8">
                                         <real key="value" value="12"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </constraint>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nUs-pW-EG8" secondAttribute="trailing" constant="157" id="0t5-hv-267" customClass="NSLayoutHelper" customModule="stax" customModuleProvider="target">
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone8">
-                                        <real key="value" value="137.5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone11Pro">
-                                        <real key="value" value="137.5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </constraint>
@@ -367,7 +312,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </constraint>
-                            <constraint firstItem="4fw-O2-bhg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AwU-9C-axD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uGN-pU-597" secondAttribute="trailing" constant="22" id="BTs-tl-8US" customClass="NSLayoutHelper" customModule="stax" customModuleProvider="target">
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iPhone8">
@@ -382,7 +326,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </constraint>
-                            <constraint firstAttribute="trailing" secondItem="4fw-O2-bhg" secondAttribute="trailing" id="CJn-4R-U4K"/>
                             <constraint firstItem="uGN-pU-597" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="Lq5-dg-KTh" customClass="NSLayoutHelper" customModule="stax" customModuleProvider="target">
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iPhone8">
@@ -400,17 +343,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </constraint>
-                            <constraint firstItem="nUs-pW-EG8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="157" id="TbM-xH-ayo" customClass="NSLayoutHelper" customModule="stax" customModuleProvider="target">
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone8">
-                                        <real key="value" value="137.5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone11Pro">
-                                        <real key="value" value="137.5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </constraint>
-                            <constraint firstItem="4fw-O2-bhg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-335" id="jpI-5s-br2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EGa-TP-dHf" secondAttribute="trailing" constant="22" id="lc1-I0-wuq" customClass="NSLayoutHelper" customModule="stax" customModuleProvider="target">
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iPhone8">
@@ -425,7 +357,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </constraint>
-                            <constraint firstItem="nUs-pW-EG8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rHZ-o2-0um"/>
                             <constraint firstItem="EGa-TP-dHf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="vMV-Y4-gxQ" customClass="NSLayoutHelper" customModule="stax" customModuleProvider="target">
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iPhone8">
@@ -451,8 +382,6 @@
                         <outlet property="previousCountLabel" destination="D8o-Tp-t05" id="AEg-WB-Z4w"/>
                         <outlet property="recordCountLabel" destination="6nJ-QI-tT2" id="239-kG-g7p"/>
                         <outlet property="sessionCountLabel" destination="4v5-Kp-TSW" id="aMp-pz-jyC"/>
-                        <outlet property="settingViewTopConstraint" destination="jpI-5s-br2" id="n8s-9X-kXP"/>
-                        <outlet property="sliderValue" destination="x0E-2i-tOL" id="Nkd-AX-IlS"/>
                         <outlet property="timerLabel" destination="fAv-2q-bI8" id="pfq-MX-zwX"/>
                         <outlet property="timerViewContainer" destination="EGa-TP-dHf" id="czj-R0-TdI"/>
                     </connections>
