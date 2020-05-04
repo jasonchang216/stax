@@ -23,13 +23,12 @@ class ProfileTableViewController: UITableViewController {
         super.viewDidAppear(animated)
         getPreviousData()
         prevCountLabel.text = String(previousCount)
-        print("previous count is now \(previousCount)")
         getRecordData()
         longCountLabel.text = String(recordCount)
     }
     
     
-    
+// MARK: - Core Data and Update Labels
 
     @IBOutlet weak var prevCountLabel: UILabel!
     @IBOutlet weak var longCountLabel: UILabel!
@@ -47,7 +46,6 @@ class ProfileTableViewController: UITableViewController {
             {
                 previousCount = data.value(forKey: "sessions") as! Int
             }
-            print("Previous data retrieved \(previousCount)")
                 
         } catch {
             print("Failed")
@@ -71,5 +69,15 @@ class ProfileTableViewController: UITableViewController {
             print("Failed")
         }
     }
+    
+// MARK: - Reset Function
+    
+    @IBAction func resetCount(_ sender: Any) {
+    }
+    
+    
+    
+    
+    
     
 }

@@ -149,6 +149,11 @@ class ViewController: UIViewController {
             runTimer()
         }
         
+        if needToResetCount == true {
+            sessionCount = 0
+            needToResetCount = false
+        }
+        
         sessionCount += 1
         sessionCountLabel.text = String(sessionCount)
         
@@ -268,6 +273,8 @@ class ViewController: UIViewController {
         isTimerRunning = true
     }
     
+    var needToResetCount = false
+    
     @IBAction func resetTimer(_ sender: Any) {
         timer.invalidate()
         seconds = Int(timerValue)
@@ -278,8 +285,9 @@ class ViewController: UIViewController {
         } else {
         self.save(sessionCount: sessionCount)
             }
-        sessionCount = 0
-        sessionCountLabel.text = "0"
+        needToResetCount = true
+        //sessionCount = 0
+        //sessionCountLabel.text = "0"
         mainTitle.text = "TIME TO WORKOUT"
         countLabel.text = " "
         exerciseLabel.text = " "
