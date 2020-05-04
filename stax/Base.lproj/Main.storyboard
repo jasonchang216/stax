@@ -16,113 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uGN-pU-597">
-                                <rect key="frame" x="22" y="117" width="370" height="148"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Workout" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Kw-lj-bLx">
-                                        <rect key="frame" x="26" y="12" width="88" height="44"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="4Kw-lj-bLx" secondAttribute="height" multiplier="2:1" id="XBj-fL-FcD"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Previous Workout" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kIV-sV-EfE">
-                                        <rect key="frame" x="141" y="12" width="88" height="44"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="kIV-sV-EfE" secondAttribute="height" multiplier="2:1" id="1OL-SL-Kmb"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longest Workout" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jTH-Hj-pFh">
-                                        <rect key="frame" x="256" y="12" width="88" height="44"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="jTH-Hj-pFh" secondAttribute="height" multiplier="2:1" id="Gxf-A4-YeB"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PreviousCount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D8o-Tp-t05">
-                                        <rect key="frame" x="141" y="60" width="88" height="76"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="D8o-Tp-t05" secondAttribute="height" multiplier="88:76" id="laV-g1-xo9"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="65"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SessionCount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4v5-Kp-TSW">
-                                        <rect key="frame" x="26" y="60" width="88" height="76"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="4v5-Kp-TSW" secondAttribute="height" multiplier="22:19" id="bdQ-Td-lmh"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="65"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RecordCount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6nJ-QI-tT2">
-                                        <rect key="frame" x="256" y="60" width="88" height="76"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="6nJ-QI-tT2" secondAttribute="height" multiplier="88:76" id="QIt-2m-X1u"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="65"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="4v5-Kp-TSW" secondAttribute="bottom" constant="12" id="0Om-Im-hjP"/>
-                                    <constraint firstItem="jTH-Hj-pFh" firstAttribute="top" secondItem="uGN-pU-597" secondAttribute="top" constant="12" id="1Nj-y6-RCc"/>
-                                    <constraint firstItem="4Kw-lj-bLx" firstAttribute="top" secondItem="uGN-pU-597" secondAttribute="top" constant="12" id="4HT-Xh-a1V"/>
-                                    <constraint firstItem="4v5-Kp-TSW" firstAttribute="top" secondItem="4Kw-lj-bLx" secondAttribute="bottom" constant="4" id="AIJ-qI-qvL"/>
-                                    <constraint firstItem="D8o-Tp-t05" firstAttribute="leading" secondItem="4v5-Kp-TSW" secondAttribute="trailing" constant="27" id="AtV-NM-EaW"/>
-                                    <constraint firstItem="kIV-sV-EfE" firstAttribute="top" secondItem="uGN-pU-597" secondAttribute="top" constant="12" id="DIL-K7-5bo"/>
-                                    <constraint firstAttribute="bottom" secondItem="D8o-Tp-t05" secondAttribute="bottom" constant="12" id="EFx-cr-qv9"/>
-                                    <constraint firstItem="4v5-Kp-TSW" firstAttribute="leading" secondItem="uGN-pU-597" secondAttribute="leading" constant="26" id="G9P-Xm-n5Y"/>
-                                    <constraint firstAttribute="trailing" secondItem="kIV-sV-EfE" secondAttribute="trailing" constant="141" id="GPV-Q7-9E4" customClass="NSLayoutHelper" customModule="stax" customModuleProvider="target">
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhone11Pro">
-                                                <real key="value" value="124"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </constraint>
-                                    <constraint firstAttribute="trailing" secondItem="6nJ-QI-tT2" secondAttribute="trailing" constant="26" id="HgG-UZ-ItQ"/>
-                                    <constraint firstItem="4Kw-lj-bLx" firstAttribute="leading" secondItem="uGN-pU-597" secondAttribute="leading" constant="26" id="Mxn-Qy-Ffu"/>
-                                    <constraint firstItem="6nJ-QI-tT2" firstAttribute="top" secondItem="uGN-pU-597" secondAttribute="top" constant="60" id="dsH-yD-0DV"/>
-                                    <constraint firstAttribute="bottom" secondItem="6nJ-QI-tT2" secondAttribute="bottom" constant="12" id="fpB-uI-7aN"/>
-                                    <constraint firstAttribute="trailing" secondItem="jTH-Hj-pFh" secondAttribute="trailing" constant="26" id="g2y-Be-vkp"/>
-                                    <constraint firstItem="kIV-sV-EfE" firstAttribute="leading" secondItem="uGN-pU-597" secondAttribute="leading" constant="141" id="h0I-Fb-Bc9" customClass="NSLayoutHelper" customModule="stax" customModuleProvider="target">
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhone11Pro">
-                                                <real key="value" value="124"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </constraint>
-                                    <constraint firstItem="jTH-Hj-pFh" firstAttribute="leading" secondItem="uGN-pU-597" secondAttribute="leading" constant="256" id="m2k-lV-0zX" customClass="NSLayoutHelper" customModule="stax" customModuleProvider="target">
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhone11Pro">
-                                                <real key="value" value="240"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </constraint>
-                                    <constraint firstItem="4v5-Kp-TSW" firstAttribute="top" secondItem="uGN-pU-597" secondAttribute="top" constant="60" id="mQu-Tb-ghs"/>
-                                    <constraint firstItem="6nJ-QI-tT2" firstAttribute="leading" secondItem="D8o-Tp-t05" secondAttribute="trailing" constant="27" id="nYz-oR-jfS"/>
-                                    <constraint firstItem="D8o-Tp-t05" firstAttribute="top" secondItem="uGN-pU-597" secondAttribute="top" constant="60" id="sOD-At-NI8"/>
-                                    <constraint firstItem="6nJ-QI-tT2" firstAttribute="top" secondItem="jTH-Hj-pFh" secondAttribute="bottom" constant="4" id="ybE-1o-3Ei"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="35"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CPc-Hm-dYN">
-                                <rect key="frame" x="22" y="325" width="370" height="276"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CPc-Hm-dYN">
+                                <rect key="frame" x="22" y="326.66666666666674" width="370" height="276"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DO" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="16" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vVj-XR-0nM">
                                         <rect key="frame" x="22" y="10" width="324" height="36"/>
@@ -212,8 +107,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EGa-TP-dHf">
-                                <rect key="frame" x="22" y="661" width="370" height="182"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EGa-TP-dHf">
+                                <rect key="frame" x="22" y="662.66666666666663" width="370" height="182"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fAv-2q-bI8">
                                         <rect key="frame" x="51" y="4" width="268" height="120"/>
@@ -279,6 +174,20 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Workout" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Kw-lj-bLx">
+                                <rect key="frame" x="144" y="45" width="127" height="63.333333333333336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SessionCount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4v5-Kp-TSW">
+                                <rect key="frame" x="163" y="102" width="88" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="65"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -292,16 +201,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </constraint>
-                            <constraint firstItem="uGN-pU-597" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="117" id="2YX-t7-TGF" customClass="NSLayoutHelper" customModule="stax" customModuleProvider="target">
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone8Plus">
-                                        <real key="value" value="68"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone8">
-                                        <real key="value" value="43"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </constraint>
                             <constraint firstItem="EGa-TP-dHf" firstAttribute="top" secondItem="CPc-Hm-dYN" secondAttribute="bottom" constant="60" id="4fz-4g-ajh" customClass="NSLayoutHelper" customModule="stax" customModuleProvider="target">
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iPhone8Plus">
@@ -312,34 +211,10 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </constraint>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uGN-pU-597" secondAttribute="trailing" constant="22" id="BTs-tl-8US" customClass="NSLayoutHelper" customModule="stax" customModuleProvider="target">
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone8">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </constraint>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CPc-Hm-dYN" secondAttribute="trailing" constant="22" id="CIB-Ry-osx" customClass="NSLayoutHelper" customModule="stax" customModuleProvider="target">
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iPhone8">
                                         <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </constraint>
-                            <constraint firstItem="uGN-pU-597" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="Lq5-dg-KTh" customClass="NSLayoutHelper" customModule="stax" customModuleProvider="target">
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone8">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </constraint>
-                            <constraint firstItem="CPc-Hm-dYN" firstAttribute="top" secondItem="uGN-pU-597" secondAttribute="bottom" constant="60" id="N8w-eL-fvj" customClass="NSLayoutHelper" customModule="stax" customModuleProvider="target">
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone8Plus">
-                                        <real key="value" value="24"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone8">
-                                        <real key="value" value="12"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </constraint>
@@ -379,8 +254,6 @@
                         <outlet property="countLabel" destination="W1d-uG-ZTN" id="uxu-bH-oZw"/>
                         <outlet property="exerciseLabel" destination="Maj-Wg-kAc" id="KSb-rn-Arc"/>
                         <outlet property="mainTitle" destination="vVj-XR-0nM" id="NMT-5H-IIK"/>
-                        <outlet property="previousCountLabel" destination="D8o-Tp-t05" id="AEg-WB-Z4w"/>
-                        <outlet property="recordCountLabel" destination="6nJ-QI-tT2" id="239-kG-g7p"/>
                         <outlet property="sessionCountLabel" destination="4v5-Kp-TSW" id="aMp-pz-jyC"/>
                         <outlet property="timerLabel" destination="fAv-2q-bI8" id="pfq-MX-zwX"/>
                         <outlet property="timerViewContainer" destination="EGa-TP-dHf" id="czj-R0-TdI"/>
@@ -388,7 +261,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1752" y="-178"/>
+            <point key="canvasLocation" x="1750.7246376811595" y="-178.125"/>
         </scene>
         <!--Item-->
         <scene sceneID="o6k-3m-gJn">
@@ -587,6 +460,91 @@
             </objects>
             <point key="canvasLocation" x="1750.7246376811595" y="503.57142857142856"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="S8t-jt-T9I">
+            <objects>
+                <tableViewController id="5p8-Lh-WbT" customClass="ProfileTableViewController" customModule="stax" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2c7-iI-mRg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <sections>
+                            <tableViewSection id="sR6-64-Akt">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="sK4-et-sVU">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sK4-et-sVU" id="uZI-b1-v8q">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Previous Workout's # of Sets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNC-Zd-b4S">
+                                                    <rect key="frame" x="20" y="11" width="220" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PrevCount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NiL-7D-Lw5">
+                                                    <rect key="frame" x="313" y="11" width="81" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="dKA-j3-DlC">
+                                        <rect key="frame" x="0.0" y="71.666667938232422" width="414" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dKA-j3-DlC" id="XXp-wK-Dhk">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Longest Workout's # of Sets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKO-UK-9Tw">
+                                                    <rect key="frame" x="20" y="11" width="216" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LongCount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8rs-34-FBP">
+                                                    <rect key="frame" x="309" y="11" width="85" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="pK5-mS-KLn">
+                                        <rect key="frame" x="0.0" y="115.33333587646484" width="414" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pK5-mS-KLn" id="2WI-7E-h8r">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="5p8-Lh-WbT" id="L6o-Pq-ebj"/>
+                            <outlet property="delegate" destination="5p8-Lh-WbT" id="9We-Ly-eZs"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="2El-wC-ruN"/>
+                    <connections>
+                        <outlet property="longCountLabel" destination="8rs-34-FBP" id="RCc-Cw-2ZD"/>
+                        <outlet property="prevCountLabel" destination="NiL-7D-Lw5" id="zxe-Rn-78I"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="szd-Bp-XIu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1751" y="1222"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="qi2-2Z-JSf">
             <objects>
@@ -600,11 +558,12 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="ZiO-N3-8Sr"/>
                         <segue destination="TtA-ah-OWY" kind="relationship" relationship="viewControllers" id="WDV-gF-a3T"/>
+                        <segue destination="5p8-Lh-WbT" kind="relationship" relationship="viewControllers" id="1b6-OP-TlY"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QuM-ut-j0g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="844.92753623188412" y="125.89285714285714"/>
+            <point key="canvasLocation" x="257" y="744"/>
         </scene>
     </scenes>
     <resources>

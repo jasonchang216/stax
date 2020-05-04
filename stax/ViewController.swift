@@ -20,10 +20,6 @@ class ViewController: UIViewController {
         countLabel.text = " "
         exerciseLabel.text = " "
         sessionCountLabel.text = "0"
-        getPreviousData()
-        previousCountLabel.text = String(previousCount)
-        getRecordData()
-        recordCountLabel.text = String(recordCount)
         
         if (defaults.object(forKey: "timer") != nil) {
             timerValue = defaults.float(forKey: "timer")
@@ -35,11 +31,6 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        getPreviousData()
-        previousCountLabel.text = String(previousCount)
-        print("previous count is now \(previousCount)")
-        getRecordData()
-        recordCountLabel.text = String(recordCount)
         if (defaults.object(forKey: "timer") != nil) {
             timerValue = defaults.float(forKey: "timer")
         }
@@ -69,13 +60,9 @@ class ViewController: UIViewController {
     
  
 // MARK: - Exercise Counter Saver and Fetcher
-    @IBOutlet weak var previousCountLabel: UILabel!
     @IBOutlet weak var sessionCountLabel: UILabel!
-    @IBOutlet weak var recordCountLabel: UILabel!
     
     var sessionCount: Int = 0
-    var previousCount = Int()
-    var recordCount = Int()
     
     func save(sessionCount: Int) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
@@ -90,42 +77,6 @@ class ViewController: UIViewController {
             try managedContext.save()
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
-        }
-    }
-    
-    
-    func getPreviousData() {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Sessions")
-        request.returnsObjectsAsFaults = false
-        do {
-            let result = try context.fetch(request)
-            for data in result as! [NSManagedObject]
-            {
-                previousCount = data.value(forKey: "sessions") as! Int
-            }
-            print("Previous data retrieved \(previousCount)")
-                
-        } catch {
-            print("Failed")
-        }
-    }
-    
-    func getRecordData() {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Sessions")
-        request.fetchLimit = 1
-        var highestCount : NSSortDescriptor = NSSortDescriptor(key: "sessions", ascending: false)
-        request.sortDescriptors = [highestCount]
-        do {
-            let result = try context.fetch(request)
-            for data in result as! [NSManagedObject]
-            {
-                recordCount = data.value(forKey: "sessions") as! Int
-            }
-                
-        } catch {
-            print("Failed")
         }
     }
     
@@ -306,10 +257,6 @@ class ViewController: UIViewController {
             mainTitle.text = "TIME TO WORKOUT"
             countLabel.text = " "
             exerciseLabel.text = " "
-            getPreviousData()
-            previousCountLabel.text = String(previousCount)
-            getRecordData()
-            recordCountLabel.text = String(recordCount)
         }
     }
     
@@ -336,10 +283,6 @@ class ViewController: UIViewController {
         mainTitle.text = "TIME TO WORKOUT"
         countLabel.text = " "
         exerciseLabel.text = " "
-        getPreviousData()
-        previousCountLabel.text = String(previousCount)
-        getRecordData()
-        recordCountLabel.text = String(recordCount)
     }
     
     @IBAction func pauseTimer(_ sender: Any) {
