@@ -25,6 +25,10 @@ class ViewController: UIViewController {
             timerValue = defaults.float(forKey: "timer")
         }
         
+        if (defaults.object(forKey: "timer") == nil) {
+            timerValue = 900
+        }
+        
         timerLabel.text = timeString(time: TimeInterval(timerValue))
         
     }
