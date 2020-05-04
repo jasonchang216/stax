@@ -46,6 +46,7 @@ class ProfileTableViewController: UITableViewController {
             {
                 previousCount = data.value(forKey: "sessions") as! Int
             }
+            prevCountLabel.text = String(previousCount)
                 
         } catch {
             print("Failed")
@@ -64,6 +65,7 @@ class ProfileTableViewController: UITableViewController {
             {
                 recordCount = data.value(forKey: "sessions") as! Int
             }
+            longCountLabel.text = String(recordCount)
                 
         } catch {
             print("Failed")
@@ -73,11 +75,24 @@ class ProfileTableViewController: UITableViewController {
 // MARK: - Reset Function
     
     @IBAction func resetCount(_ sender: Any) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+        return
+        }
+        
+        let managedContext =  appDelegate.persistentContainer.viewContext
+        let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Sessions")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
+
+        do {
+            try managedContext.execute(deleteRequest)
+            try managedContext.save()
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+        getPreviousData()
+        prevCountLabel.text = String(0)
+        getRecordData()
+        longCountLabel.text = String(0)
     }
-    
-    
-    
-    
-    
     
 }
