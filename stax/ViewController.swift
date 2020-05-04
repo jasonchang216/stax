@@ -81,9 +81,9 @@ class ViewController: UIViewController {
     }
     
 // MARK: - Exercise Randomizer
+    @IBOutlet weak var mainTitle: UILabel!
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var exerciseLabel: UILabel!
-    @IBOutlet weak var mainTitle: UILabel!
     
     var countList: [String] = []
     var exerciseList: [String] = []
@@ -229,8 +229,6 @@ class ViewController: UIViewController {
     
     
 // MARK: - Time Keeper
-    
-    @IBOutlet weak var timerViewContainer: UIView!
     @IBOutlet weak var timerLabel: UILabel!
     var seconds = 60
     var timer = Timer()
