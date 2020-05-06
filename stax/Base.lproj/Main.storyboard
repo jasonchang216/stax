@@ -347,6 +347,73 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Disclaimers" id="Tww-Uq-4ce">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="aRe-jd-Xn1">
+                                        <rect key="frame" x="0.0" y="402.00000762939453" width="414" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aRe-jd-Xn1" id="o0R-Pd-gAH">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UeU-C9-BAb">
+                                                    <rect key="frame" x="20" y="7" width="129" height="30"/>
+                                                    <state key="normal" title="General Disclaimer"/>
+                                                    <connections>
+                                                        <segue destination="RWc-P4-P0J" kind="show" id="LEr-xY-sSD"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="UeU-C9-BAb" firstAttribute="leading" secondItem="o0R-Pd-gAH" secondAttribute="leading" constant="20" id="AB4-gu-8TH"/>
+                                                <constraint firstItem="UeU-C9-BAb" firstAttribute="centerY" secondItem="o0R-Pd-gAH" secondAttribute="centerY" id="rge-2o-XFQ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="5BI-ia-9sL">
+                                        <rect key="frame" x="0.0" y="445.66667556762695" width="414" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5BI-ia-9sL" id="iE0-r6-wdI">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QTt-sx-sse">
+                                                    <rect key="frame" x="20" y="7" width="121" height="30"/>
+                                                    <state key="normal" title="Health Disclaimer"/>
+                                                    <connections>
+                                                        <segue destination="77e-Qh-9WV" kind="show" id="ZZo-R3-x2P"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="QTt-sx-sse" firstAttribute="leading" secondItem="iE0-r6-wdI" secondAttribute="leading" constant="20" id="6pf-q6-BJS"/>
+                                                <constraint firstItem="QTt-sx-sse" firstAttribute="centerY" secondItem="iE0-r6-wdI" secondAttribute="centerY" id="WHd-Gp-aj8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ggu-ji-eCy">
+                                        <rect key="frame" x="0.0" y="489.33334350585938" width="414" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ggu-ji-eCy" id="USW-rT-Uv4">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZm-eE-teA">
+                                                    <rect key="frame" x="20" y="7" width="135" height="30"/>
+                                                    <state key="normal" title="Personal Disclaimer"/>
+                                                    <connections>
+                                                        <segue destination="aVn-s5-88i" kind="show" id="lCb-OP-bvi"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="tZm-eE-teA" firstAttribute="centerY" secondItem="USW-rT-Uv4" secondAttribute="centerY" id="T4c-ce-bUz"/>
+                                                <constraint firstItem="tZm-eE-teA" firstAttribute="leading" secondItem="USW-rT-Uv4" secondAttribute="leading" constant="20" id="V0y-L2-zEq"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="TtA-ah-OWY" id="wps-Gd-Z8A"/>
@@ -366,6 +433,92 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OjV-3E-vuT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1750.7246376811595" y="503.57142857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hvg-hK-khN">
+            <objects>
+                <viewController id="RWc-P4-P0J" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="roK-Cr-opa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="X0d-zM-5cU">
+                                <rect key="frame" x="20" y="95" width="374" height="713"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">By entering this website or purchasing or using our blog, e-mails, programs, services, and/or products, you are agreeing to accept all parts of this disclaimer. Thus, if you do not agree to the disclaimer below, STOP now, and do not use our website, blog, e-mails, programs, services, or products.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GENERAL DISCLAIMER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Su-WT-RXQ">
+                                <rect key="frame" x="20" y="38" width="267" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Vb4-7u-VaX" firstAttribute="trailing" secondItem="X0d-zM-5cU" secondAttribute="trailing" constant="20" id="67D-LR-k4h"/>
+                            <constraint firstItem="7Su-WT-RXQ" firstAttribute="top" secondItem="Vb4-7u-VaX" secondAttribute="top" constant="38" id="bw7-Qq-WBg"/>
+                            <constraint firstItem="X0d-zM-5cU" firstAttribute="bottom" secondItem="Vb4-7u-VaX" secondAttribute="bottom" id="mkg-3x-Zer"/>
+                            <constraint firstItem="X0d-zM-5cU" firstAttribute="top" secondItem="7Su-WT-RXQ" secondAttribute="bottom" constant="25" id="qtC-N4-uA3"/>
+                            <constraint firstItem="7Su-WT-RXQ" firstAttribute="leading" secondItem="Vb4-7u-VaX" secondAttribute="leading" constant="20" id="uPs-kB-8g1"/>
+                            <constraint firstItem="X0d-zM-5cU" firstAttribute="leading" secondItem="Vb4-7u-VaX" secondAttribute="leading" constant="20" id="yB3-Wv-znl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Vb4-7u-VaX"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="JtZ-Je-D68"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bVj-BQ-Ibl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2957.971014492754" y="-120.53571428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tVa-EP-ARv">
+            <objects>
+                <viewController id="77e-Qh-9WV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aXI-Vb-2aq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="amu-St-wkX">
+                                <rect key="frame" x="20" y="66" width="374" height="742"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <mutableString key="text">We strongly recommend that you consult with your physician before beginning any exercise program. You should be in good physical condition and be able to participate in the exercise. The creator of this application and Stronghold is not a licensed medical care provider and represents that it has no expertise in determining the effect of any specific exercise on a medical condition. You should understand that when participating in any exercise or exercise program, there is the possibility of physical injury. If you engage in this exercise or exercise program, you agree that you do so at your own risk, are voluntarily participating in these activities, assume all risk of injury to yourself, and agree to release and discharge the creator of this app from any and all claims or causes of action, known or unknown, arising out of Stronghold. The information provided is not intended to be a substitute for professional medical advice, diagnosis or treatment.  Never disregard professional medical advice, or delay in seeking it, because of something you have read on this application.  Never rely on information on this application in place of seeking professional medical advice.
+
+The creator of Stronghold or the Stronghold application is not responsible or liable for any advice, course of treatment, diagnosis or any other information, services or products that you obtain through this site.  You are encouraged to consult with your doctor with regard to this information contained on or through this website.  After reading articles, watching videos or reading other content from this website, you are encouraged to review the information carefully with your professional healthcare provider. 
+
+If you are in the United States and think you are having a medical or health emergency, call your health care professional, or 911, immediately.
+
+Certain health or medical material on this site may be sexually explicit. Please do not use this site if you would find these materials offensive.</mutableString>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HEALTH DISCLAIMER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEw-VG-lYc">
+                                <rect key="frame" x="20" y="26" width="249" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="amu-St-wkX" firstAttribute="top" secondItem="IEw-VG-lYc" secondAttribute="bottom" constant="8" id="ACv-g6-kQK"/>
+                            <constraint firstItem="zcv-GN-lzn" firstAttribute="trailing" secondItem="amu-St-wkX" secondAttribute="trailing" constant="20" id="Flq-Gi-JvK"/>
+                            <constraint firstItem="amu-St-wkX" firstAttribute="bottom" secondItem="zcv-GN-lzn" secondAttribute="bottom" id="NNn-4f-13v"/>
+                            <constraint firstItem="IEw-VG-lYc" firstAttribute="leading" secondItem="zcv-GN-lzn" secondAttribute="leading" constant="20" id="RRh-KD-Sxq"/>
+                            <constraint firstItem="amu-St-wkX" firstAttribute="top" secondItem="zcv-GN-lzn" secondAttribute="top" constant="66" id="T93-bQ-JJx"/>
+                            <constraint firstItem="amu-St-wkX" firstAttribute="leading" secondItem="zcv-GN-lzn" secondAttribute="leading" constant="20" id="bv3-Ax-lfb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zcv-GN-lzn"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="uro-mt-Ri5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fj3-ee-SVi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2957.971014492754" y="603.34821428571422"/>
         </scene>
         <!--Tracker-->
         <scene sceneID="S8t-jt-T9I">
@@ -469,6 +622,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="szd-Bp-XIu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1751" y="1222"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7c2-7P-ZdG">
+            <objects>
+                <viewController id="aVn-s5-88i" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fdr-Zz-vRd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal Disclaimer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86A-jF-Sgl">
+                                <rect key="frame" x="20" y="34" width="220" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Bwe-GK-2bh">
+                                <rect key="frame" x="20" y="74" width="374" height="734"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <mutableString key="text">I am not a doctor.  The information I provide is based on my personal experience.
+The information contained in our application, services and/or products is for educational and informational purposes only, and is made available to you as self-help tools for your own use. While we draw on our prior expertise, you acknowledge that we are supporting you in our roles exclusively as providing exercise suggestion only.
+We are not medical health practitioners or mental health providers and we are not holding ourselves out to be in any capacity. Rather, we serve as guides who help you reach your own health and wellness goals.
+We aim to accurately represent the information provided on this application, services, and products. You are acknowledging that you are participating voluntarily in using our application, services, and/or products, and you alone are solely and personally responsible for your results. You acknowledge that you take full responsibility for your health, life and well-being, as well as the health, lives and well-being of your family and children (born and unborn, as applicable), and all decisions now or in the future.
+In the event that you use the information provided through our website, blog, e-mails, programs, services, and/or products, we assume no responsibility.
+Every effort is made to ensure the accuracy of published information on or through our application, services and products; however, the information may inadvertently contain inaccuracies or typographical errors. Every effort has been made to present you with the most accurate, up-to-date information, but because the nature of fitness, exercise, health, and well-being research is constantly evolving, we cannot be held responsible for the accuracy of our content.</mutableString>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Bwe-GK-2bh" firstAttribute="leading" secondItem="jxL-Ph-cVt" secondAttribute="leading" constant="20" id="8CP-Od-BXi"/>
+                            <constraint firstItem="Bwe-GK-2bh" firstAttribute="bottom" secondItem="jxL-Ph-cVt" secondAttribute="bottom" id="OgW-ai-re8"/>
+                            <constraint firstItem="Bwe-GK-2bh" firstAttribute="top" secondItem="86A-jF-Sgl" secondAttribute="bottom" constant="8" id="VuZ-iu-85m"/>
+                            <constraint firstItem="86A-jF-Sgl" firstAttribute="leading" secondItem="jxL-Ph-cVt" secondAttribute="leading" constant="20" id="YHU-UL-W02"/>
+                            <constraint firstItem="jxL-Ph-cVt" firstAttribute="trailing" secondItem="Bwe-GK-2bh" secondAttribute="trailing" constant="20" id="i3E-Bf-zAl"/>
+                            <constraint firstItem="86A-jF-Sgl" firstAttribute="top" secondItem="jxL-Ph-cVt" secondAttribute="top" constant="34" id="iuo-tK-2k1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jxL-Ph-cVt"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YmM-P0-Q4i"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CJb-gJ-RRO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2953.6231884057975" y="1273.6607142857142"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="qi2-2Z-JSf">

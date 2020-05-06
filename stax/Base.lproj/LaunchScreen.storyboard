@@ -16,22 +16,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="viewBackground" translatesAutoresizingMaskIntoConstraints="NO" id="qJq-io-ZrW">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="marble" translatesAutoresizingMaskIntoConstraints="NO" id="qJq-io-ZrW">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STAX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2u9-2u-Kcu">
-                                <rect key="frame" x="153.5" y="421" width="107" height="54"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Stronghold Logo" translatesAutoresizingMaskIntoConstraints="NO" id="3fS-74-zlR">
+                                <rect key="frame" x="87" y="412" width="240" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="2u9-2u-Kcu" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="CXd-lQ-kLF"/>
-                            <constraint firstItem="2u9-2u-Kcu" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="fwy-tN-0hr"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -41,6 +35,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="viewBackground" width="2046" height="1989"/>
+        <image name="Stronghold Logo" width="575" height="65"/>
+        <image name="marble" width="1920" height="1920"/>
     </resources>
 </document>

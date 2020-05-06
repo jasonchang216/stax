@@ -48,19 +48,19 @@ class ViewController: UIViewController {
     var timerValue: Float = 0
 
 // MARK: - Exercise List
-    let upperBodyExercises: [String] = ["PUSHUPS",   "UP-DOWN PLANKS"]
-    let upperBodyExercisesCount: [String] = ["10", "10"]
+    let upperBodyExercises: [String] = ["PUSHUPS", "UP-DOWN PLANKS", "TRICEP EXTENSIONS", "SCAPULAR SHURGS", "PIKE PUSHUPS", "SHOULDER TAP"]
+    let upperBodyExercisesCount: [String] = ["10", "10", "10", "10", "10", "20"]
     
     
-    let lowerBodyExercises: [String] = ["SQUATS", "LUNGES (EACH LEG)", "LATERAL LUNGES (EACH SIDE)"]
-    let lowerBodyExercisesCount: [String] = ["20","10", "10"]
+    let lowerBodyExercises: [String] = ["SQUATS", "LUNGES (EACH LEG)", "LATERAL LUNGES (EACH LEG)", "CALF RAISES", "SQUAT JUMPS", "DONKEY KICKS (EACH LEG)", "BRIDGES"]
+    let lowerBodyExercisesCount: [String] = ["20","10", "10", "20", "10", "10", "10"]
     
     
-    let cardioExercises: [String] = ["JUMPING JACKS", "BURPEES", "SECONDS OF HIGH KNEES"]
-    let cardioExercisesCount: [String] = ["30", "10", "30"]
+    let cardioExercises: [String] = ["JUMPING JACKS", "BURPEES", "SECONDS OF HIGH KNEES", "JUMP KNEE TUCKS"]
+    let cardioExercisesCount: [String] = ["30", "10", "30", "20"]
     
-    let coreExercises: [String] = ["SECONDS OF PLANK", "V-UPS"]
-    let coreExercisesCount: [String] = ["15", "10"]
+    let coreExercises: [String] = ["SECONDS OF PLANK", "V-UPS", "DEAD BUGS", "SECONDS OF FLUTTER KICKS", "LEG RAISES"]
+    let coreExercisesCount: [String] = ["15", "10", "10", "15", "10"]
     
  
 // MARK: - Exercise Counter Saver and Fetcher
@@ -312,7 +312,7 @@ class ViewController: UIViewController {
 //MARK - Background image load
 
 extension UIView {
-    func addBackground(imageName: String = "viewBackground", contentMode: UIView.ContentMode = .scaleAspectFill) {
+    func addBackground(imageName: String = "marble", contentMode: UIView.ContentMode = .scaleAspectFill) {
         // setup the UIImageView
         let backgroundImageView = UIImageView(frame: UIScreen.main.bounds)
         backgroundImageView.image = UIImage(named: imageName)
