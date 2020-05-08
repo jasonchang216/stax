@@ -65,7 +65,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zXx-PA-W1N">
-                                <rect key="frame" x="100.33333333333333" y="667.66666666666663" width="213.33333333333337" height="95.333333333333371"/>
+                                <rect key="frame" x="100.66666666666667" y="667.66666666666663" width="212.66666666666663" height="95.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="zXx-PA-W1N" secondAttribute="height" multiplier="67:30" id="Xhp-AE-Bfo"/>
                                 </constraints>
@@ -74,7 +74,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ql-v5-t3G">
-                                <rect key="frame" x="100.33333333333331" y="763" width="100" height="40"/>
+                                <rect key="frame" x="100.66666666666669" y="763" width="100" height="40"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="MMp-Cw-dd6"/>
@@ -92,7 +92,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K4h-gz-SfV">
-                                <rect key="frame" x="213.66666666666663" y="763" width="100" height="40"/>
+                                <rect key="frame" x="213.33333333333337" y="763" width="100" height="40"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="XdJ-FO-yUJ"/>
@@ -155,7 +155,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Workout" id="VNl-BF-0Mk"/>
+                    <tabBarItem key="tabBarItem" title="Workout" image="WorkoutIcon" selectedImage="WorkoutIconBlue" id="VNl-BF-0Mk"/>
                     <navigationItem key="navigationItem" id="C7q-nZ-5uh">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="dial" catalog="system" id="Neq-U3-0t6">
                             <connections>
@@ -420,7 +420,7 @@
                             <outlet property="delegate" destination="TtA-ah-OWY" id="aiq-LO-Vnm"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Settings" id="d6B-0i-7bq"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="SettingsIcon" selectedImage="SettingsIconBlue" id="d6B-0i-7bq"/>
                     <connections>
                         <outlet property="cardioUISwitch" destination="OZZ-1Y-eSw" id="Zkf-Ve-W0h"/>
                         <outlet property="coreUISwitch" destination="Nwo-2d-Nb8" id="u0J-5f-tpE"/>
@@ -485,13 +485,13 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="amu-St-wkX">
                                 <rect key="frame" x="20" y="66" width="374" height="742"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <mutableString key="text">We strongly recommend that you consult with your physician before beginning any exercise program. You should be in good physical condition and be able to participate in the exercise. The creator of this application and Stronghold is not a licensed medical care provider and represents that it has no expertise in determining the effect of any specific exercise on a medical condition. You should understand that when participating in any exercise or exercise program, there is the possibility of physical injury. If you engage in this exercise or exercise program, you agree that you do so at your own risk, are voluntarily participating in these activities, assume all risk of injury to yourself, and agree to release and discharge the creator of this app from any and all claims or causes of action, known or unknown, arising out of Stronghold. The information provided is not intended to be a substitute for professional medical advice, diagnosis or treatment.  Never disregard professional medical advice, or delay in seeking it, because of something you have read on this application.  Never rely on information on this application in place of seeking professional medical advice.
+                                <string key="text">We strongly recommend that you consult with your physician before beginning any exercise program. You should be in good physical condition and be able to participate in the exercise. The creator of this application and Stronghold is not a licensed medical care provider and represents that it has no expertise in determining the effect of any specific exercise on a medical condition. You should understand that when participating in any exercise or exercise program, there is the possibility of physical injury. If you engage in this exercise or exercise program, you agree that you do so at your own risk, are voluntarily participating in these activities, assume all risk of injury to yourself, and agree to release and discharge the creator of this app from any and all claims or causes of action, known or unknown, arising out of Stronghold. The information provided is not intended to be a substitute for professional medical advice, diagnosis or treatment.  Never disregard professional medical advice, or delay in seeking it, because of something you have read on this application.  Never rely on information on this application in place of seeking professional medical advice.
 
 The creator of Stronghold or the Stronghold application is not responsible or liable for any advice, course of treatment, diagnosis or any other information, services or products that you obtain through this site.  You are encouraged to consult with your doctor with regard to this information contained on or through this website.  After reading articles, watching videos or reading other content from this website, you are encouraged to review the information carefully with your professional healthcare provider. 
 
 If you are in the United States and think you are having a medical or health emergency, call your health care professional, or 911, immediately.
 
-Certain health or medical material on this site may be sexually explicit. Please do not use this site if you would find these materials offensive.</mutableString>
+Certain health or medical material on this site may be sexually explicit. Please do not use this site if you would find these materials offensive.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -613,7 +613,7 @@ Certain health or medical material on this site may be sexually explicit. Please
                             <outlet property="delegate" destination="5p8-Lh-WbT" id="9We-Ly-eZs"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Tracker" id="2El-wC-ruN"/>
+                    <tabBarItem key="tabBarItem" title="Tracker" image="TrackerIcon" selectedImage="TrackerIconBlue" id="2El-wC-ruN"/>
                     <connections>
                         <outlet property="longCountLabel" destination="8rs-34-FBP" id="RCc-Cw-2ZD"/>
                         <outlet property="prevCountLabel" destination="NiL-7D-Lw5" id="zxe-Rn-78I"/>
@@ -640,12 +640,12 @@ Certain health or medical material on this site may be sexually explicit. Please
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Bwe-GK-2bh">
                                 <rect key="frame" x="20" y="74" width="374" height="734"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <mutableString key="text">I am not a doctor.  The information I provide is based on my personal experience.
+                                <string key="text">I am not a doctor.  The information I provide is based on my personal experience.
 The information contained in our application, services and/or products is for educational and informational purposes only, and is made available to you as self-help tools for your own use. While we draw on our prior expertise, you acknowledge that we are supporting you in our roles exclusively as providing exercise suggestion only.
 We are not medical health practitioners or mental health providers and we are not holding ourselves out to be in any capacity. Rather, we serve as guides who help you reach your own health and wellness goals.
 We aim to accurately represent the information provided on this application, services, and products. You are acknowledging that you are participating voluntarily in using our application, services, and/or products, and you alone are solely and personally responsible for your results. You acknowledge that you take full responsibility for your health, life and well-being, as well as the health, lives and well-being of your family and children (born and unborn, as applicable), and all decisions now or in the future.
 In the event that you use the information provided through our website, blog, e-mails, programs, services, and/or products, we assume no responsibility.
-Every effort is made to ensure the accuracy of published information on or through our application, services and products; however, the information may inadvertently contain inaccuracies or typographical errors. Every effort has been made to present you with the most accurate, up-to-date information, but because the nature of fitness, exercise, health, and well-being research is constantly evolving, we cannot be held responsible for the accuracy of our content.</mutableString>
+Every effort is made to ensure the accuracy of published information on or through our application, services and products; however, the information may inadvertently contain inaccuracies or typographical errors. Every effort has been made to present you with the most accurate, up-to-date information, but because the nature of fitness, exercise, health, and well-being research is constantly evolving, we cannot be held responsible for the accuracy of our content.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -690,6 +690,12 @@ Every effort is made to ensure the accuracy of published information on or throu
         </scene>
     </scenes>
     <resources>
+        <image name="SettingsIcon" width="23" height="23"/>
+        <image name="SettingsIconBlue" width="23" height="23"/>
+        <image name="TrackerIcon" width="23" height="23"/>
+        <image name="TrackerIconBlue" width="23" height="23"/>
+        <image name="WorkoutIcon" width="23" height="23"/>
+        <image name="WorkoutIconBlue" width="23" height="23"/>
         <image name="dial" catalog="system" width="128" height="106"/>
     </resources>
 </document>
