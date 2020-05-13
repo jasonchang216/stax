@@ -48,19 +48,17 @@ class ViewController: UIViewController {
     var timerValue: Float = 0
 
 // MARK: - Exercise List
-    let upperBodyExercises: [String] = ["PUSHUPS", "UP-DOWN PLANKS", "TRICEP EXTENSIONS", "SCAPULAR SHURGS", "PIKE PUSHUPS", "SHOULDER TAP"]
-    let upperBodyExercisesCount: [String] = ["10", "10", "10", "10", "10", "20"]
+    let upperBodyExercises: [String] = ["PUSHUPS", "UP-DOWN PLANKS", "TRICEP EXTENSIONS", "SCAPULAR SHURGS", "PIKE PUSHUPS", "SHOULDER TAP", "WIDE ARM PUSHUPS", "DIAMOND PUSHUPS", "INCHWORM CRAWLS", "TRICEP DIPS", "TRICEP PUSHUPS", "WALKOUT PUSHUPS", "THIGH TAPS", "RAISED LEG PUSHUPS"]
+    let upperBodyExercisesCount: [String] = ["10", "10", "10", "10", "10", "20", "10", "10", "5", "10", "10", "5", "10", "10"]
     
+    let lowerBodyExercises: [String] = ["SQUATS", "LUNGES (EACH LEG)", "LATERAL LUNGES (EACH LEG)", "CALF RAISES", "SQUAT JUMPS", "DONKEY KICKS (EACH LEG)", "BRIDGES", "SPLIT SQUAT (EACH LEG)", "LUNGES STEP UP (EACH LEG)", "PLANK JUMP INS", "SINGLE LEG BRIDGES (EACH LEG)", "POWER LUNGES (EACH LEG)", "PYLO LUNGES", "LATERAL LEG RAISES"]
+    let lowerBodyExercisesCount: [String] = ["20", "10", "10", "20", "10", "10", "10", "10", "10", "10", "10", "10", "20", "20"]
     
-    let lowerBodyExercises: [String] = ["SQUATS", "LUNGES (EACH LEG)", "LATERAL LUNGES (EACH LEG)", "CALF RAISES", "SQUAT JUMPS", "DONKEY KICKS (EACH LEG)", "BRIDGES"]
-    let lowerBodyExercisesCount: [String] = ["20","10", "10", "20", "10", "10", "10"]
+    let cardioExercises: [String] = ["JUMPING JACKS", "BURPEES", "SECONDS OF HIGH KNEES", "JUMP KNEE TUCKS", "SECONDS OF MOUNTAIN CLIMBERS", "SECONDS OF PLANK JACKS", "HIGH VERTICAL JUMPS", "SECONDS OF SKATERS", "LONG JUMPS (JOG BACK)", "TUCK JUMPS", "SINGE LEG HOPS (EACH LEG)", "STAR JUMPS", "SECONDS OF BUTT KICKS"]
+    let cardioExercisesCount: [String] = ["30", "10", "30", "20", "30", "30", "20", "30", "10", "20", "20", "20", "20"]
     
-    
-    let cardioExercises: [String] = ["JUMPING JACKS", "BURPEES", "SECONDS OF HIGH KNEES", "JUMP KNEE TUCKS"]
-    let cardioExercisesCount: [String] = ["30", "10", "30", "20"]
-    
-    let coreExercises: [String] = ["SECONDS OF PLANK", "V-UPS", "DEAD BUGS", "SECONDS OF FLUTTER KICKS", "LEG RAISES"]
-    let coreExercisesCount: [String] = ["15", "10", "10", "15", "10"]
+    let coreExercises: [String] = ["SECONDS OF PLANK", "V-UPS", "DEAD BUGS", "SECONDS OF FLUTTER KICKS", "LEG RAISES", "SIT UPS", "ARM AND LEG PLANK RAISES", "SECONDS OF SCISSORS", "SECONDS OF SIDE PLANK", "TRUNK ROTATIONS", "PLANK T ROTATIONS", "STANDING OBLIQUE CRUNCHES", "SECONDS OF BICYCLES", "REVERSE CRUNCHES"]
+    let coreExercisesCount: [String] = ["15", "10", "10", "15", "10", "20", "20", "15", "15", "20", "20", "20", "20", "20"]
     
  
 // MARK: - Exercise Counter Saver and Fetcher

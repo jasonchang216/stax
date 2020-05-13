@@ -11,7 +11,7 @@
         <!--Workout-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="stax" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Stronghold" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -178,7 +178,7 @@
         <!--Settings-->
         <scene sceneID="o6k-3m-gJn">
             <objects>
-                <tableViewController id="TtA-ah-OWY" customClass="SettingsTableViewController" customModule="stax" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="TtA-ah-OWY" customClass="SettingsTableViewController" customModule="Stronghold" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="oiu-2a-wiy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -300,7 +300,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Timer Settings" id="cmj-oQ-00F">
+                            <tableViewSection headerTitle="Timer Settings (zero for no timer)" id="cmj-oQ-00F">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="llP-GB-DhB">
                                         <rect key="frame" x="0.0" y="258.66667175292969" width="414" height="43.666667938232422"/>
@@ -523,7 +523,7 @@ Certain health or medical material on this site may be sexually explicit. Please
         <!--Tracker-->
         <scene sceneID="S8t-jt-T9I">
             <objects>
-                <tableViewController id="5p8-Lh-WbT" customClass="ProfileTableViewController" customModule="stax" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="5p8-Lh-WbT" customClass="ProfileTableViewController" customModule="Stronghold" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2c7-iI-mRg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -594,15 +594,18 @@ Certain health or medical material on this site may be sexually explicit. Please
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKi-lh-dma">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKi-lh-dma">
                                                     <rect key="frame" x="161" y="7" width="92" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Reset Counts"/>
                                                     <connections>
                                                         <action selector="resetCount:" destination="5p8-Lh-WbT" eventType="touchUpInside" id="nuE-eb-eMa"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="MKi-lh-dma" firstAttribute="centerX" secondItem="2WI-7E-h8r" secondAttribute="centerX" id="ap9-M2-eOd"/>
+                                                <constraint firstItem="MKi-lh-dma" firstAttribute="centerY" secondItem="2WI-7E-h8r" secondAttribute="centerY" id="evF-ss-oeL"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>

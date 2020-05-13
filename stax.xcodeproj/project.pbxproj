@@ -37,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9E1E1E22243C23A40051C2E0 /* stax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stax.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E1E1E22243C23A40051C2E0 /* Stronghold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stronghold.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E1E1E25243C23A40051C2E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E1E1E27243C23A40051C2E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9E1E1E2A243C23A40051C2E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 		9E1E1E23243C23A40051C2E0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9E1E1E22243C23A40051C2E0 /* stax.app */,
+				9E1E1E22243C23A40051C2E0 /* Stronghold.app */,
 				9E1E1E36243C23AD0051C2E0 /* staxTests.xctest */,
 				9E1E1E41243C23AD0051C2E0 /* staxUITests.xctest */,
 			);
@@ -151,7 +151,7 @@
 			);
 			name = stax;
 			productName = stax;
-			productReference = 9E1E1E22243C23A40051C2E0 /* stax.app */;
+			productReference = 9E1E1E22243C23A40051C2E0 /* Stronghold.app */;
 			productType = "com.apple.product-type.application";
 		};
 		9E1E1E35243C23AD0051C2E0 /* staxTests */ = {
@@ -445,13 +445,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TJVNHN35M6;
 				INFOPLIST_FILE = stax/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jason.stax;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jason.stronghold;
+				PRODUCT_NAME = Stronghold;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -462,13 +463,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TJVNHN35M6;
 				INFOPLIST_FILE = stax/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jason.stax;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jason.stronghold;
+				PRODUCT_NAME = Stronghold;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
