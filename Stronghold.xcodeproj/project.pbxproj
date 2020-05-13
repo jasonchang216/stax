@@ -44,10 +44,10 @@
 		9E1E1E2C243C23AC0051C2E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E1E1E2F243C23AC0051C2E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E1E1E31243C23AC0051C2E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9E1E1E36243C23AD0051C2E0 /* staxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = staxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E1E1E36243C23AD0051C2E0 /* StrongholdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StrongholdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E1E1E3A243C23AD0051C2E0 /* staxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = staxTests.swift; sourceTree = "<group>"; };
 		9E1E1E3C243C23AD0051C2E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9E1E1E41243C23AD0051C2E0 /* staxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = staxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E1E1E41243C23AD0051C2E0 /* StrongholdUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StrongholdUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E1E1E45243C23AD0051C2E0 /* staxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = staxUITests.swift; sourceTree = "<group>"; };
 		9E1E1E47243C23AD0051C2E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9EB3984F2458E6D2005B3DE6 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
@@ -94,8 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				9E1E1E22243C23A40051C2E0 /* Stronghold.app */,
-				9E1E1E36243C23AD0051C2E0 /* staxTests.xctest */,
-				9E1E1E41243C23AD0051C2E0 /* staxUITests.xctest */,
+				9E1E1E36243C23AD0051C2E0 /* StrongholdTests.xctest */,
+				9E1E1E41243C23AD0051C2E0 /* StrongholdUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,9 +137,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9E1E1E21243C23A40051C2E0 /* stax */ = {
+		9E1E1E21243C23A40051C2E0 /* Stronghold */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9E1E1E4A243C23AD0051C2E0 /* Build configuration list for PBXNativeTarget "stax" */;
+			buildConfigurationList = 9E1E1E4A243C23AD0051C2E0 /* Build configuration list for PBXNativeTarget "Stronghold" */;
 			buildPhases = (
 				9E1E1E1E243C23A40051C2E0 /* Sources */,
 				9E1E1E1F243C23A40051C2E0 /* Frameworks */,
@@ -149,14 +149,14 @@
 			);
 			dependencies = (
 			);
-			name = stax;
+			name = Stronghold;
 			productName = stax;
 			productReference = 9E1E1E22243C23A40051C2E0 /* Stronghold.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9E1E1E35243C23AD0051C2E0 /* staxTests */ = {
+		9E1E1E35243C23AD0051C2E0 /* StrongholdTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9E1E1E4D243C23AD0051C2E0 /* Build configuration list for PBXNativeTarget "staxTests" */;
+			buildConfigurationList = 9E1E1E4D243C23AD0051C2E0 /* Build configuration list for PBXNativeTarget "StrongholdTests" */;
 			buildPhases = (
 				9E1E1E32243C23AD0051C2E0 /* Sources */,
 				9E1E1E33243C23AD0051C2E0 /* Frameworks */,
@@ -167,14 +167,14 @@
 			dependencies = (
 				9E1E1E38243C23AD0051C2E0 /* PBXTargetDependency */,
 			);
-			name = staxTests;
+			name = StrongholdTests;
 			productName = staxTests;
-			productReference = 9E1E1E36243C23AD0051C2E0 /* staxTests.xctest */;
+			productReference = 9E1E1E36243C23AD0051C2E0 /* StrongholdTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9E1E1E40243C23AD0051C2E0 /* staxUITests */ = {
+		9E1E1E40243C23AD0051C2E0 /* StrongholdUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9E1E1E50243C23AD0051C2E0 /* Build configuration list for PBXNativeTarget "staxUITests" */;
+			buildConfigurationList = 9E1E1E50243C23AD0051C2E0 /* Build configuration list for PBXNativeTarget "StrongholdUITests" */;
 			buildPhases = (
 				9E1E1E3D243C23AD0051C2E0 /* Sources */,
 				9E1E1E3E243C23AD0051C2E0 /* Frameworks */,
@@ -185,9 +185,9 @@
 			dependencies = (
 				9E1E1E43243C23AD0051C2E0 /* PBXTargetDependency */,
 			);
-			name = staxUITests;
+			name = StrongholdUITests;
 			productName = staxUITests;
-			productReference = 9E1E1E41243C23AD0051C2E0 /* staxUITests.xctest */;
+			productReference = 9E1E1E41243C23AD0051C2E0 /* StrongholdUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -213,7 +213,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9E1E1E1D243C23A40051C2E0 /* Build configuration list for PBXProject "stax" */;
+			buildConfigurationList = 9E1E1E1D243C23A40051C2E0 /* Build configuration list for PBXProject "Stronghold" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -226,9 +226,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9E1E1E21243C23A40051C2E0 /* stax */,
-				9E1E1E35243C23AD0051C2E0 /* staxTests */,
-				9E1E1E40243C23AD0051C2E0 /* staxUITests */,
+				9E1E1E21243C23A40051C2E0 /* Stronghold */,
+				9E1E1E35243C23AD0051C2E0 /* StrongholdTests */,
+				9E1E1E40243C23AD0051C2E0 /* StrongholdUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -294,12 +294,12 @@
 /* Begin PBXTargetDependency section */
 		9E1E1E38243C23AD0051C2E0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9E1E1E21243C23A40051C2E0 /* stax */;
+			target = 9E1E1E21243C23A40051C2E0 /* Stronghold */;
 			targetProxy = 9E1E1E37243C23AD0051C2E0 /* PBXContainerItemProxy */;
 		};
 		9E1E1E43243C23AD0051C2E0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9E1E1E21243C23A40051C2E0 /* stax */;
+			target = 9E1E1E21243C23A40051C2E0 /* Stronghold */;
 			targetProxy = 9E1E1E42243C23AD0051C2E0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -492,7 +492,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/stax.app/stax";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stronghold.app/Stronghold";
 			};
 			name = Debug;
 		};
@@ -512,7 +512,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/stax.app/stax";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stronghold.app/Stronghold";
 			};
 			name = Release;
 		};
@@ -557,7 +557,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9E1E1E1D243C23A40051C2E0 /* Build configuration list for PBXProject "stax" */ = {
+		9E1E1E1D243C23A40051C2E0 /* Build configuration list for PBXProject "Stronghold" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9E1E1E48243C23AD0051C2E0 /* Debug */,
@@ -566,7 +566,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9E1E1E4A243C23AD0051C2E0 /* Build configuration list for PBXNativeTarget "stax" */ = {
+		9E1E1E4A243C23AD0051C2E0 /* Build configuration list for PBXNativeTarget "Stronghold" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9E1E1E4B243C23AD0051C2E0 /* Debug */,
@@ -575,7 +575,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9E1E1E4D243C23AD0051C2E0 /* Build configuration list for PBXNativeTarget "staxTests" */ = {
+		9E1E1E4D243C23AD0051C2E0 /* Build configuration list for PBXNativeTarget "StrongholdTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9E1E1E4E243C23AD0051C2E0 /* Debug */,
@@ -584,7 +584,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9E1E1E50243C23AD0051C2E0 /* Build configuration list for PBXNativeTarget "staxUITests" */ = {
+		9E1E1E50243C23AD0051C2E0 /* Build configuration list for PBXNativeTarget "StrongholdUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9E1E1E51243C23AD0051C2E0 /* Debug */,
