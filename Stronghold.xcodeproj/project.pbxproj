@@ -451,6 +451,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jason.stronghold;
 				PRODUCT_NAME = Stronghold;
 				SWIFT_VERSION = 5.0;
@@ -469,6 +470,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jason.stronghold;
 				PRODUCT_NAME = Stronghold;
 				SWIFT_VERSION = 5.0;

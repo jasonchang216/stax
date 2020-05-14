@@ -347,7 +347,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Disclaimers" id="Tww-Uq-4ce">
+                            <tableViewSection headerTitle="Disclaimers and Policies" id="Tww-Uq-4ce">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="aRe-jd-Xn1">
                                         <rect key="frame" x="0.0" y="402.00000762939453" width="414" height="43.666667938232422"/>
@@ -412,6 +412,47 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Z5w-VQ-z3h">
+                                        <rect key="frame" x="0.0" y="533.0000114440918" width="414" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Z5w-VQ-z3h" id="gmb-74-wSE">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghn-1d-l32">
+                                                    <rect key="frame" x="20" y="7" width="95" height="30"/>
+                                                    <state key="normal" title="Privacy Policy"/>
+                                                    <connections>
+                                                        <segue destination="1mx-5D-8Pm" kind="show" id="RcI-z1-p3Y"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ghn-1d-l32" firstAttribute="leading" secondItem="gmb-74-wSE" secondAttribute="leading" constant="20" id="8fa-w0-q0K"/>
+                                                <constraint firstItem="ghn-1d-l32" firstAttribute="centerY" secondItem="gmb-74-wSE" secondAttribute="centerY" id="Uod-IH-h92"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Y5I-YZ-8EW">
+                                        <rect key="frame" x="0.0" y="576.66667938232422" width="414" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Y5I-YZ-8EW" id="hZa-sL-Idu">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For more information visit stronghold.studio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pDD-JW-FvZ">
+                                                    <rect key="frame" x="20" y="11.666666666666664" width="334" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="pDD-JW-FvZ" firstAttribute="leading" secondItem="hZa-sL-Idu" secondAttribute="leadingMargin" id="7h5-Vl-HSf"/>
+                                                <constraint firstItem="pDD-JW-FvZ" firstAttribute="centerY" secondItem="hZa-sL-Idu" secondAttribute="centerY" id="RuF-Ce-Vll"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -472,7 +513,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bVj-BQ-Ibl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2957.971014492754" y="-120.53571428571428"/>
+            <point key="canvasLocation" x="2954" y="-178"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tVa-EP-ARv">
@@ -518,7 +559,7 @@ Certain health or medical material on this site may be sexually explicit. Please
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fj3-ee-SVi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2957.971014492754" y="603.34821428571422"/>
+            <point key="canvasLocation" x="2954" y="504"/>
         </scene>
         <!--Tracker-->
         <scene sceneID="S8t-jt-T9I">
@@ -669,7 +710,86 @@ Every effort is made to ensure the accuracy of published information on or throu
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CJb-gJ-RRO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2953.6231884057975" y="1273.6607142857142"/>
+            <point key="canvasLocation" x="2954" y="1221"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="KdF-SA-Nt5">
+            <objects>
+                <viewController id="1mx-5D-8Pm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Cs-D4-yUl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRIVACY POLICY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yl-sJ-V5N">
+                                <rect key="frame" x="20" y="34" width="198" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="xck-lc-kr5">
+                                <rect key="frame" x="20" y="74" width="374" height="768"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <mutableString key="text">SUMMARY OF POLICY
+
+We do not collect your data. Ever. Any data generated by using this application is stored on your device only.
+
+We do not track you. We do not profile you. We do not log or share personal information. Period.
+
+We do not even know how to collect your data. We have nowhere physically to store your data (we have no servers). We would not even know what to do with your data if we got it. So what ever happens on this application on your device stays on your device.
+
+If you would like to delete any data stored on your device you may go to the "Tracker" tab of this application and tap "Reset Counts". 
+If we ever do learn how to collect data, find a place to store your data, and figure out what to do with your data we will update this privacy policy and notify users of these changes which will include what data is collected, where and how it is stored, the retention policy of your data, and what we will do with your data.
+
+FORMAL POLICY
+
+Last updated: May 14, 2020
+
+Stronghold and I (“we” or “us” or “our”) respects the privacy of our users (“user” or “you”). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our mobile application (the “Application”). Please read this Privacy Policy carefully. IF YOU DO NOT AGREE WITH THE TERMS OF THIS PRIVACY POLICY, PLEASE DO NOT ACCESS THE APPLICATION.
+
+We reserve the right to make changes to this Privacy Policy at any time and for any reason. We will alert you about any changes by updating the “Last updated” date of this Privacy Policy. You are encouraged to periodically review this Privacy Policy to stay informed of updates. You will be deemed to have been made aware of, will be subject to, and will be deemed to have accepted the changes in any revised Privacy Policy by your continued use of the Application after the date such revised Privacy Policy is posted.
+
+This Privacy Policy does not apply to the third-party online/mobile store from which you install the Application or make payments, including any in-game virtual items, which may also collect and use data about you. We are not responsible for any of the data collected by any such third party.
+
+This Privacy Policy was created using Termly’s Privacy Policy Generator.
+
+Website Analytics
+
+Only for our website (stronghold.studio) we may also partner with selected third-party vendors, such as Google Analytics to allow tracking technologies and remarketing services on the Application through the use of first party cookies and third-party cookies, to, among other things, analyze and track users’ use of the Application, determine the popularity of certain content, and better understand online activity. By accessing the Application, you consent to the collection and use of your information by these third-party vendors. You are encouraged to review their privacy policy and contact them directly for responses to your questions. We do not transfer personal information to these third-party vendors. We do not collect or use data generated on this mobile application.
+
+POLICY FOR CHILDREN
+
+We do not knowingly solicit information from or market to children under the age of 13. If you become aware of any data we have collected from children under age 13, please contact us using the contact information provided below.
+
+CALIFORNIA PRIVACY RIGHTS
+
+California Civil Code Section 1798.83, also known as the “Shine The Light” law, permits our users who are California residents to request and obtain from us, once a year and free of charge, information about categories of personal information (if any, currrently none) we disclosed to third parties for direct marketing purposes and the names and addresses of all third parties with which we shared personal information in the immediately preceding calendar year. If you are a California resident and would like to make such a request, please submit your request in writing to us using the contact information provided below.
+
+If you are under 18 years of age, reside in California, and have a registered account with the Application, you have the right to request removal of unwanted data that you publicly post on the Application. To request removal of such data, please contact us using the contact information provided below, and include the email address associated with your account and a statement that you reside in California. We will make sure the data is not publicly displayed on the Application, but please be aware that the data may not be completely or comprehensively removed from our systems.
+
+CONTACT US
+
+If you have questions or comments about this Privacy Policy, please contact us at contact@stronghold.studio</mutableString>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="8yl-sJ-V5N" firstAttribute="leading" secondItem="Xf4-bl-4OW" secondAttribute="leading" constant="20" id="01L-O9-SJf"/>
+                            <constraint firstItem="xck-lc-kr5" firstAttribute="top" secondItem="8yl-sJ-V5N" secondAttribute="bottom" constant="8" id="3gn-Va-w7m"/>
+                            <constraint firstItem="8yl-sJ-V5N" firstAttribute="top" secondItem="Xf4-bl-4OW" secondAttribute="top" constant="34" id="JmV-LU-Gs3"/>
+                            <constraint firstItem="Xf4-bl-4OW" firstAttribute="trailing" secondItem="xck-lc-kr5" secondAttribute="trailing" constant="20" id="OQd-ob-FHM"/>
+                            <constraint firstItem="xck-lc-kr5" firstAttribute="leading" secondItem="Xf4-bl-4OW" secondAttribute="leading" constant="20" id="Ssw-5E-0lF"/>
+                            <constraint firstAttribute="bottom" secondItem="xck-lc-kr5" secondAttribute="bottom" id="aDj-D1-xE1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Xf4-bl-4OW"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="li2-WX-xnQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qjb-yX-1ep" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2953.6231884057975" y="1925.8928571428571"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="qi2-2Z-JSf">
@@ -689,7 +809,7 @@ Every effort is made to ensure the accuracy of published information on or throu
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QuM-ut-j0g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="257" y="744"/>
+            <point key="canvasLocation" x="562" y="504"/>
         </scene>
     </scenes>
     <resources>
