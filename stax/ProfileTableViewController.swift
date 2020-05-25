@@ -44,7 +44,7 @@ class ProfileTableViewController: UITableViewController {
             let result = try context.fetch(request)
             for data in result as! [NSManagedObject]
             {
-                previousCount = data.value(forKey: "sessions") as! Int
+                previousCount = data.value(forKey: "setCount") as! Int
             }
             prevCountLabel.text = String(previousCount)
                 
@@ -57,13 +57,13 @@ class ProfileTableViewController: UITableViewController {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Sessions")
         request.fetchLimit = 1
-        let highestCount : NSSortDescriptor = NSSortDescriptor(key: "sessions", ascending: false)
+        let highestCount : NSSortDescriptor = NSSortDescriptor(key: "setCount", ascending: false)
         request.sortDescriptors = [highestCount]
         do {
             let result = try context.fetch(request)
             for data in result as! [NSManagedObject]
             {
-                recordCount = data.value(forKey: "sessions") as! Int
+                recordCount = data.value(forKey: "setCount") as! Int
             }
             longCountLabel.text = String(recordCount)
                 

@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Exercises" representedClassName="Exercises" syncable="YES" codeGenerationType="class">
+        <attribute name="exercise" optional="YES" attributeType="String"/>
+        <attribute name="exerciseID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="reps" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="session" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Sessions" inverseName="exercises" inverseEntity="Sessions"/>
+    </entity>
     <entity name="Sessions" representedClassName="Sessions" syncable="YES" codeGenerationType="class">
-        <attribute name="sessions" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="sessionID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="setCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="exercises" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Exercises" inverseName="session" inverseEntity="Exercises"/>
     </entity>
     <elements>
-        <element name="Sessions" positionX="-36" positionY="9" width="128" height="58"/>
+        <element name="Sessions" positionX="-36" positionY="9" width="128" height="103"/>
+        <element name="Exercises" positionX="-293.46484375" positionY="122.1015625" width="128" height="103"/>
     </elements>
 </model>

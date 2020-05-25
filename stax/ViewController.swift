@@ -74,7 +74,7 @@ class ViewController: UIViewController {
         let managedContext =  appDelegate.persistentContainer.viewContext
         let entity = NSEntityDescription.entity(forEntityName: "Sessions", in: managedContext)!
         let session = NSManagedObject(entity: entity, insertInto: managedContext)
-        session.setValue(sessionCount, forKeyPath: "sessions")
+        session.setValue(sessionCount, forKeyPath: "setCount")
         do {
             try managedContext.save()
         } catch let error as NSError {
