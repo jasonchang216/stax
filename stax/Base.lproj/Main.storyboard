@@ -17,14 +17,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4v5-Kp-TSW">
-                                <rect key="frame" x="178" y="72" width="58" height="60"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <rect key="frame" x="176.66666666666666" y="72" width="60.666666666666657" height="62.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sets Done" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Kw-lj-bLx">
-                                <rect key="frame" x="167.66666666666666" y="134" width="79" height="20.333333333333343"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="163" y="136.33333333333334" width="88" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -40,19 +40,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="exerciseLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hLs-bV-OPT">
-                                <rect key="frame" x="154.66666666666666" y="498.66666666666669" width="104.99999999999997" height="20.000000000000057"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="exerciseLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hLs-bV-OPT">
+                                <rect key="frame" x="10" y="498.66666666666674" width="394" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIg-Mr-vJD">
-                                <rect key="frame" x="144.66666666666666" y="528.66666666666663" width="124.99999999999997" height="40"/>
+                                <rect key="frame" x="144.66666666666666" y="544.66666666666663" width="124.99999999999997" height="40"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Vdw-Ja-pjL"/>
                                     <constraint firstAttribute="width" constant="125" id="dXg-qH-x82"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="LET'S START"/>
                                 <userDefinedRuntimeAttributes>
@@ -80,6 +81,7 @@
                                     <constraint firstAttribute="height" constant="40" id="MMp-Cw-dd6"/>
                                     <constraint firstAttribute="width" constant="100" id="WiT-YC-nRk"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="PAUSE"/>
                                 <userDefinedRuntimeAttributes>
@@ -98,7 +100,7 @@
                                     <constraint firstAttribute="width" constant="100" id="XdJ-FO-yUJ"/>
                                     <constraint firstAttribute="height" constant="40" id="mCX-oB-4Js"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="END"/>
                                 <userDefinedRuntimeAttributes>
@@ -112,11 +114,12 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bR-p1-R5d">
                                 <rect key="frame" x="144.66666666666666" y="321.66666666666669" width="124.99999999999997" height="40"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Mim-PA-6Je"/>
                                     <constraint firstAttribute="width" constant="125" id="WGk-Ac-KyH"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="SKIP"/>
                                 <userDefinedRuntimeAttributes>
@@ -135,6 +138,7 @@
                             <constraint firstItem="4v5-Kp-TSW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AFz-J8-Ern"/>
                             <constraint firstItem="4Bf-Z0-eyp" firstAttribute="top" secondItem="9iW-ci-pre" secondAttribute="bottom" id="Bwk-Vv-BTF"/>
                             <constraint firstItem="3ql-v5-t3G" firstAttribute="leading" secondItem="zXx-PA-W1N" secondAttribute="leading" id="FA3-LT-Mmc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hLs-bV-OPT" secondAttribute="trailing" constant="10" id="FHp-x7-KoR"/>
                             <constraint firstItem="K4h-gz-SfV" firstAttribute="top" secondItem="zXx-PA-W1N" secondAttribute="bottom" id="HMc-Kb-kRM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="K4h-gz-SfV" secondAttribute="bottom" constant="10" id="O7B-3D-X5p"/>
                             <constraint firstItem="hLs-bV-OPT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OrU-zz-Npy"/>
@@ -151,6 +155,7 @@
                             <constraint firstItem="jIg-Mr-vJD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r39-YK-XGF"/>
                             <constraint firstItem="4Bf-Z0-eyp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rBe-hl-OUG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3ql-v5-t3G" secondAttribute="bottom" constant="10" id="rMJ-37-tKr"/>
+                            <constraint firstItem="hLs-bV-OPT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="xSV-GP-Kzb"/>
                             <constraint firstItem="K4h-gz-SfV" firstAttribute="trailing" secondItem="zXx-PA-W1N" secondAttribute="trailing" id="z0r-kC-UGJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -167,6 +172,7 @@
                         <outlet property="countLabel" destination="4Bf-Z0-eyp" id="Aqy-se-TOp"/>
                         <outlet property="exerciseLabel" destination="hLs-bV-OPT" id="2oa-ae-q2t"/>
                         <outlet property="mainTitle" destination="9iW-ci-pre" id="wBk-MT-cIs"/>
+                        <outlet property="nextButton" destination="jIg-Mr-vJD" id="j5i-Wc-xYm"/>
                         <outlet property="sessionCountLabel" destination="4v5-Kp-TSW" id="aMp-pz-jyC"/>
                         <outlet property="timerLabel" destination="zXx-PA-W1N" id="GVM-ZD-wzu"/>
                     </connections>
@@ -357,7 +363,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UeU-C9-BAb">
-                                                    <rect key="frame" x="20" y="7" width="129" height="30"/>
+                                                    <rect key="frame" x="20" y="5.6666666666666679" width="144" height="33"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <state key="normal" title="General Disclaimer"/>
                                                     <connections>
                                                         <segue destination="RWc-P4-P0J" kind="show" id="LEr-xY-sSD"/>
@@ -378,7 +385,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QTt-sx-sse">
-                                                    <rect key="frame" x="20" y="7" width="121" height="30"/>
+                                                    <rect key="frame" x="20" y="5.6666666666666679" width="135" height="33"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <state key="normal" title="Health Disclaimer"/>
                                                     <connections>
                                                         <segue destination="77e-Qh-9WV" kind="show" id="ZZo-R3-x2P"/>
@@ -399,7 +407,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZm-eE-teA">
-                                                    <rect key="frame" x="20" y="7" width="135" height="30"/>
+                                                    <rect key="frame" x="20" y="5.6666666666666679" width="151" height="33"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <state key="normal" title="Personal Disclaimer"/>
                                                     <connections>
                                                         <segue destination="aVn-s5-88i" kind="show" id="lCb-OP-bvi"/>
@@ -420,7 +429,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghn-1d-l32">
-                                                    <rect key="frame" x="20" y="7" width="95" height="30"/>
+                                                    <rect key="frame" x="20" y="5.6666666666666679" width="106" height="33"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <state key="normal" title="Privacy Policy"/>
                                                     <connections>
                                                         <segue destination="1mx-5D-8Pm" kind="show" id="RcI-z1-p3Y"/>
@@ -729,7 +739,7 @@ Every effort is made to ensure the accuracy of published information on or throu
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="xck-lc-kr5">
                                 <rect key="frame" x="20" y="74" width="374" height="768"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <mutableString key="text">SUMMARY OF POLICY
+                                <string key="text">SUMMARY OF POLICY
 
 We do not collect your data. Ever. Any data generated by using this application is stored on your device only.
 
@@ -768,7 +778,7 @@ If you are under 18 years of age, reside in California, and have a registered ac
 
 CONTACT US
 
-If you have questions or comments about this Privacy Policy, please contact us at contact@stronghold.studio</mutableString>
+If you have questions or comments about this Privacy Policy, please contact us at contact@stronghold.studio</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

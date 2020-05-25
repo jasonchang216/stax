@@ -31,6 +31,8 @@ class ViewController: UIViewController {
         
         timerLabel.text = timeString(time: TimeInterval(timerValue))
         
+        nextButton.setTitle("LET'S START", for:[])
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -86,6 +88,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var mainTitle: UILabel!
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var exerciseLabel: UILabel!
+    
+    @IBOutlet weak var nextButton: UIButton!
+    
     
     var countList: [String] = []
     var exerciseList: [String] = []
@@ -145,7 +150,7 @@ class ViewController: UIViewController {
         mainTitle.text = "DO"
         countLabel.text = "\(countList[number])"
         exerciseLabel.text = "\(exerciseList[number])"
-        (sender as! UIButton).setTitle("NEXT", for: [])
+        nextButton.setTitle("NEXT", for:[])
         if isTimerRunning == false {
             seconds = Int(timerValue)
             runTimer()
@@ -291,6 +296,7 @@ class ViewController: UIViewController {
         mainTitle.text = "TIME TO WORKOUT"
         countLabel.text = " "
         exerciseLabel.text = " "
+        nextButton.setTitle("GO AGAIN", for:[])
     }
     
     @IBAction func pauseTimer(_ sender: Any) {
